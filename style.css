@@ -6,13 +6,13 @@ Description: Tweaking WordPress 2019 Theme
 Template: twentynineteen
 */
 #masthead.site-header {
-	border-bottom: 2px solid brown;
+	border-bottom: 2px solid #820000;
 	max-height: 8rem !important;
-	/* background-color: #008ca1; */
+	background-color: black;
 }
 .grid-container {
-	height: 100%;
-	margin: 0;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .grid-container {
@@ -20,8 +20,8 @@ Template: twentynineteen
 	/* grid-template-columns: 120px 1fr 1fr;
 	grid-template-rows: 40px 40px;
 	grid-template-areas: "logo1 site nav" "logo1 site1 nav1"; */
-	grid-template-columns: 1 fr 0.2 fr 1 fr;
-	grid-template-rows: 40px 40px;
+	grid-template-columns: 1fr 0.2fr 1fr;
+	grid-template-rows: 50px 50px;
 	grid-template-areas: "site logo1 nav" " site1 logo1 nav1";
 }
 
@@ -31,26 +31,64 @@ Template: twentynineteen
 
 .site-logo {
 	grid-area: logo1;
-	align-self: center;
+	/* align-self: center; */
+	display: initial;
+	padding-left: 1rem;
 }
 
 .site-logo .custom-logo-link {
 	width: 100px !important;
 	height: 100px !important;
+	background-color: transparent !important;
 }
+@media only screen and(min-width:768px) {
+	.site-logo {
+		margin-bottom: 0;
+		position: absolute;
+		right: 0 !important;
+		/*! right: calc(100% + (1.25 * 1rem)); */
+		top: 4px;
+		z-index: 999;
+	}
+}
+
 .site-title {
 	grid-area: site;
 	margin-left: 0 !important;
 }
+.site-title a:link,
+.site-title a:visited {
+	color: #0073aa;
+}
+
 .site-description {
 	grid-area: site1;
 	margin-left: 0 !important;
+	color: #820000;
+}
+.site-description:before {
+	content: " " !important;
+	margin: 0 !important;
 }
 .main-navigation {
 	grid-area: nav;
-	margin-right: 0 !important;
+	text-align: right !important;
+	/* margin-right: 0 !important; */
 }
-.social-links-menu {
+.social-links-menu,
+.social-navigation {
 	grid-area: nav1;
-	margin-right: 0 !important;
+	text-align: right !important;
+	/* margin-right: 0 !important; */
+	margin-top: 0 !important;
+}
+.social-navigation ul.social-links-menu li a {
+	color: #820000;
+}
+@media only screen and(max-width:767px) {
+	.site-title,
+	.site-description,
+	.main-menu {
+		font-size: 10px !important;
+	}
 }
