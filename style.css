@@ -1,18 +1,15 @@
 /*
-Theme Name: Twenty Nineteen Child
-Theme URI: https://en-gb.wordpress.org/themes/twentynineteen/
-Author: ChildThemeWP.com
-Author URI: https://pacosilva.com
-Description: My WordPress Twenty Nineteen child theme.
+Theme Name: Child Theme of 2019
+Author: BN Web Design
+Author URI: https://www.bnwebdesign.com
+Description: Tweaking WordPress 2019 Theme
 Template: twentynineteen
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0.0
-Text Domain: child-2019
 */
-/*--------------------------------------------------------------
-## Header
---------------------------------------------------------------*/
+#masthead.site-header {
+	border-bottom: 2px solid brown;
+	max-height: 8rem !important;
+	/* background-color: #008ca1; */
+}
 .grid-container {
 	height: 100%;
 	margin: 0;
@@ -20,9 +17,12 @@ Text Domain: child-2019
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 120px 1 fr 1 fr;
+	/* grid-template-columns: 120px 1fr 1fr;
 	grid-template-rows: 40px 40px;
-	grid-template-areas: "logo1 site nav" "logo1 site1 nav1";
+	grid-template-areas: "logo1 site nav" "logo1 site1 nav1"; */
+	grid-template-columns: 1 fr 0.2 fr 1 fr;
+	grid-template-rows: 40px 40px;
+	grid-template-areas: "site logo1 nav" " site1 logo1 nav1";
 }
 
 .site-header {
