@@ -10,3 +10,47 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Version: 1.0.0
 Text Domain: child-2019
 */
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.grid-container {
+	height: 100%;
+	margin: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 120px 1 fr 1 fr;
+	grid-template-rows: 40px 40px;
+	grid-template-areas: "logo1 site nav" "logo1 site1 nav1";
+}
+
+.site-header {
+	padding: 1em;
+}
+
+.site-logo {
+	grid-area: logo1;
+	align-self: center;
+}
+
+.site-logo .custom-logo-link {
+	width: 100px !important;
+	height: 100px !important;
+}
+.site-title {
+	grid-area: site;
+	margin-left: 0 !important;
+}
+.site-description {
+	grid-area: site1;
+	margin-left: 0 !important;
+}
+.main-navigation {
+	grid-area: nav;
+	margin-right: 0 !important;
+}
+.social-links-menu {
+	grid-area: nav1;
+	margin-right: 0 !important;
+}
