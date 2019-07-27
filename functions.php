@@ -27,3 +27,26 @@ function crear_aviso_copyright()
     echo ' <strong>' . get_bloginfo('name') . '</strong> ';
     _e('Todos los derechos reservados.');
 }
+//Para añadir campos extras al perfil del usuario
+function wp_campos_extra($contactmethods)
+{
+    // Añadimos Twitter
+    $contactmethods['twitter'] = 'Twitter';
+    // Añadimos Facebook
+    $contactmethods['facebook'] = 'Facebook';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods', 'wp_campos_extra', 10, 1);
+//Añade imágenes destacadas en el feed RSS
+function rss_post_thumbnail($content)
+{
+    global $post;
+    if (has_post_thumbnail($post->ID)) {
+        $content = '<p>' . get_the_post_thumbnail($post->ID) .
+            '</p>' . get_the_content();
+    }
+    return $content;
+}
+add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+add_filter('the_content_feed', 'rss_post_thumbnail');
