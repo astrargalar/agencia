@@ -1,6 +1,6 @@
 /*
 Theme Name: Child Theme of 2019
-Author: BN Web Design
+Author: Paco Silva
 Author URI: https://www.bnwebdesign.com
 Description: Tweaking WordPress 2019 Theme
 Template: twentynineteen
@@ -23,8 +23,8 @@ Template: twentynineteen
 	/* grid-template-columns: 120px 1fr 1fr;
 	grid-template-rows: 40px 40px;
 	grid-template-areas: "logo1 site nav" "logo1 site1 nav1"; */
-	grid-template-columns: 1fr 0.2fr 1fr;
-	grid-template-rows: 50px 50px;
+	grid-template-columns: 1fr 100px 1fr;
+	grid-template-rows: auto auto;
 	grid-template-areas: "site logo1 nav" " site1 logo1 nav1";
 }
 
@@ -35,8 +35,8 @@ Template: twentynineteen
 .site-logo {
 	grid-area: logo1;
 	/* align-self: center; */
-	display: initial;
-	padding-left: 1rem;
+	/* display: initial; */
+	/* padding-left: 1rem; */
 }
 
 .site-logo .custom-logo-link {
@@ -53,6 +53,13 @@ Template: twentynineteen
 		top: 4px;
 		z-index: 999;
 	}
+}
+@media only screen and(min-width: 768px) .site-logo {
+	margin-bottom: 0;
+	position: absolute;
+	/* right: calc(100% + (1.25 * 1rem)); */
+	/* top: 4px; */
+	z-index: 999;
 }
 
 .site-title {
@@ -99,5 +106,34 @@ Template: twentynineteen
 ********************** Footer ******************************************************
 *************************************************************************************/
 .widget {
-	max-width: 33%;
+	max-width: 33% !important;
+}
+/* ***********  Poner border de color al footer *********/
+div.site-info {
+	border-top: 2px solid #820000;
+	background-color: black;
+	color: #0073aa !important;
+	padding: 1rem 0;
+	margin: auto !important;
+}
+/************  Creamos el Grid template *********/
+
+div.site-info {
+	display: grid;
+	grid-template-columns: auto 1fr 1fr auto;
+	grid-template-rows: auto;
+	grid-template-areas: ". titulo descripcion nav2";
+}
+a.site-name {
+	grid-area: titulo;
+	text-align: right;
+}
+a.imprint {
+	grid-area: descripcion;
+	text-align: center;
+}
+nav.footer-navigation {
+	grid-area: nav2;
+	padding-right: 1rem;
+	text-align: right;
 }
