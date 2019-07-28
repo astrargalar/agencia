@@ -139,3 +139,30 @@ nav.footer-navigation {
 	padding-right: 1rem;
 	text-align: right;
 }
+/***********************************************************
+******************** BLOG *********************************
+***********************************************************/
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+article.blog {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "titulo titulo titulo" ". descripcion ." "extracto extracto extracto";
+	/* grid-column-gap: .5rem; */
+}
+header.entry-header {
+	grid-area: titulo;
+}
+footer.entry-footer {
+	grid-area: titulo;
+	font-size: smaller;
+}
+div.entry-content {
+	grid-area: extracto;
+}
+img.attachment-blog-grande {
+	grid-area: descripcion;
+}

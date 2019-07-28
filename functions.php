@@ -12,6 +12,8 @@ add_action('wp_enqueue_scripts', 'load_theme_stylesheet');
 //Habilitar modo oscuro del editor
 add_theme_support('editor-styles');
 add_theme_support('dark-editor-style');
+add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
+
 //Función para poner el aviso de copyright y desde el año que funciona la web
 function crear_aviso_copyright()
 {
@@ -27,6 +29,7 @@ function crear_aviso_copyright()
     echo ' <strong>' . get_bloginfo('name') . '</strong> ';
     _e('Todos los derechos reservados.');
 }
+
 //Para añadir campos extras al perfil del usuario
 function wp_campos_extra($contactmethods)
 {
@@ -38,6 +41,7 @@ function wp_campos_extra($contactmethods)
     return $contactmethods;
 }
 add_filter('user_contactmethods', 'wp_campos_extra', 10, 1);
+
 //Añade imágenes destacadas en el feed RSS
 function rss_post_thumbnail($content)
 {
