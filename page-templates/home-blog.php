@@ -2,7 +2,7 @@
 
 /**
  * Template Name: Plantilla de blog
- *Template Post Type: page
+ * Template Post Type: page
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
@@ -19,26 +19,26 @@ get_header();
 ?>
 
 <section id="primary" class="content-area">
-	<main id="main" class="site-main container">
-		<div class="listado-entradas">
-			<?php
-			if (have_posts()) {
+	<main id="main" class="site-main">
+		<h2>Últimos posts</h2>
+		<?php
+		if (have_posts()) {
 
-				// Load posts loop.
-				while (have_posts()) {
-					the_post();
-					get_template_part('template-parts/content/content-blog');
-				}
-
-				// Previous/next page navigation.
-				twentynineteen_the_posts_navigation();
-			} else {
-
-				// If no content, include the "No posts found" template.
-				get_template_part('template-parts/content/content', 'none');
+			// Load posts loop.
+			while (have_posts()) {
+				the_post();
+				get_template_part('template-parts/content/content-blog');
 			}
-			?>
-		</div>
+
+			// Previous/next page navigation.
+			twentynineteen_the_posts_navigation();
+		} else {
+
+			// If no content, include the "No posts found" template.
+			get_template_part('template-parts/content/content', 'none');
+		}
+		?>
+
 	</main><!-- .site-main -->
 </section><!-- .content-area -->
 
