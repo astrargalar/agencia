@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Plantilla de blog
+ * Template Name: Página con sidebar
  * Template Post Type: page
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -41,6 +41,6 @@ get_header();
 
 	</main><!-- .site-main -->
 </section><!-- .content-area -->
-
+<?php get_sidebar(); ?>
 <?php
 get_footer();
