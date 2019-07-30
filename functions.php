@@ -54,3 +54,12 @@ function rss_post_thumbnail($content)
 }
 add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
+
+// Cambiar [...] por el botón Leer más ... en los extractos de los post
+function boton_excerpt_more($more)
+{
+    global $post;
+    // return '… <a href="' . get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>'; Así pondría solo el texto Read mores, sin botón
+    return $output . '<a href="' . esc_url(get_permalink()) . '" class="roll-button">' . esc_html__(' Leer más...', 'twentynineteen') . '</a>';
+}
+add_filter('excerpt_more', 'boton_excerpt_more');
