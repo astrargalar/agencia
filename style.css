@@ -153,9 +153,31 @@ article.blog {
 .listado-entradas article:nth-child(1) {
 	min-width: 100% !important;
 }
-.listado-entradas article:nth-child(1) img {
-	/* min-width: 100% !important; */
-	margin: 1rem 1rem 1rem 10rem !important;
+/* .listado-entradas article:nth-child(1) img {
+	/* 
+	margin: 1rem !important;
+} */
+.listado-entradas article:nth-child(2) {
+	max-width: 33% !important;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.listado-entradas article:nth-child(2) img {
+	min-width: 33% !important;
+}
+
+.listado-entradas article:nth-child(3) {
+	min-width: 66% !important;
+}
+.listado-entradas article:nth-child(3) img {
+	min-width: 66% !important;
+}
+
+.listado-entradas article:nth-child(4) {
+	max-width: 66% !important;
+}
+.listado-entradas article:nth-child(5) {
+	max-width: 33% !important;
 }
 
 /* article.blog {
