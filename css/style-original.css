@@ -74,28 +74,28 @@ body {
 	z-index: -1;
 }
 .container .column.active .bg.bg1 {
-	background-image: url(/images/bg1.jpg);
+	background: url(pantalla-codigo.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
 }
 .container .column.active .bg.bg2 {
-	background-image: url(bg2.jpg);
+	background: url(trabajando.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
 }
 .container .column.active .bg.bg3 {
-	background-image: url(bg3.jpg);
+	background: url(tablero.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
 }
 .container .column.active .bg.bg4 {
-	background-image: url(bg4.jpg);
+	background: url(preparando-el-trabajo.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;

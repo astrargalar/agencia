@@ -18,12 +18,12 @@
 get_header();
 ?>
 <!--  Inicio de la página de servicios -->
-<div class="caja">
+<div class="container">
 	<div class="column active">
 		<div class="content">
-			<h3>1</h3>
+			<h1>1</h1>
 			<div class="box">
-				<h3>Adaptamos plantillas a tu negocio</h3>
+				<h2>Adaptamos plantillas a tu negocio</h2>
 				<p>Busca tu plantilla favorita y te la adaptamos por menos de lo que crees.</p>
 			</div>
 		</div>
@@ -31,9 +31,9 @@ get_header();
 	</div>
 	<div class="column">
 		<div class="content">
-			<h3>2</h3>
+			<h1>2</h1>
 			<div class="box">
-				<h3>Mantenimiento WordPress</h3>
+				<h2>Mantenimiento WordPress</h2>
 				<p>Tu sitio web al día evitará problemas de seguridad y falta de rendimiento.</p>
 			</div>
 		</div>
@@ -41,9 +41,9 @@ get_header();
 	</div>
 	<div class="column">
 		<div class="content">
-			<h3>3</h3>
+			<h1>3</h1>
 			<div class="box">
-				<h3>Alta en Google My Business</h3>
+				<h2>Alta en Google My Business</h2>
 				<p>Te configuramos tu negocio para que aparezcas destacado en Google My Business.</p>
 			</div>
 		</div>
@@ -51,9 +51,9 @@ get_header();
 	</div>
 	<div class="column">
 		<div class="content">
-			<h3>4</h3>
+			<h1>4</h1>
 			<div class="box">
-				<h3>WordPress a medida</h3>
+				<h2>WordPress a medida</h2>
 				<p>Creamos un sitio web expresamente concebido para tu negocio o tu blog.</p>
 			</div>
 		</div>

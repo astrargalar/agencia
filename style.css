@@ -290,3 +290,13 @@ body {
 	top: 90vh;
 	min-width: 100%;
 }
+/* ********************** Eliminar las líneas separadoras de los títulos h1, h2 y posts */
+.entry.entry-title:before {
+	display: none;
+}
+h1:not(.site-title):before,
+h2:before {
+	display: none;
+}
+
+@import ('/css/style-hero.css');
