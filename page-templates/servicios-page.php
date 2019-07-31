@@ -27,7 +27,7 @@ get_header();
 				<p>Busca tu plantilla favorita y te la adaptamos por menos de lo que crees.</p>
 			</div>
 		</div>
-		<div class="bg bg1"></div>
+		<div class="bg bg1" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg1.jpg)"></div>
 	</div>
 	<div class="column">
 		<div class="content">
@@ -37,7 +37,7 @@ get_header();
 				<p>Tu sitio web al día evitará problemas de seguridad y falta de rendimiento.</p>
 			</div>
 		</div>
-		<div class="bg bg2"></div>
+		<div class="bg bg2" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg2.jpg)"></div>
 	</div>
 	<div class="column">
 		<div class="content">
@@ -47,7 +47,7 @@ get_header();
 				<p>Te configuramos tu negocio para que aparezcas destacado en Google My Business.</p>
 			</div>
 		</div>
-		<div class="bg bg3"></div>
+		<div class="bg bg3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg3.jpg)"></div>
 	</div>
 	<div class="column">
 		<div class="content">
@@ -57,7 +57,7 @@ get_header();
 				<p>Creamos un sitio web expresamente concebido para tu negocio o tu blog.</p>
 			</div>
 		</div>
-		<div class="bg bg4"></div>
+		<div class="bg bg4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg4.jpg)"></div>
 	</div>
 </div>
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

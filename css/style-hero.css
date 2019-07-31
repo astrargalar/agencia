@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	/*background: #000;*/
+	background: #000;
 }
 .container {
 	width: 100%;
@@ -81,7 +81,7 @@ body {
 	transition: 0.5s;
 }
 .container .column.active .bg.bg2 {
-	background-image: url(bg2.jpg);
+	background-image: url(/images/bg2.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;

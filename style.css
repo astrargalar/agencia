@@ -1,5 +1,5 @@
 /*
-Theme Name: Child Theme of 2019
+Theme Name: twentynineteen-Child
 Author: Paco Silva
 Author URI: https://www.bnwebdesign.com
 Description: Tweaking WordPress 2019 Theme
@@ -110,8 +110,12 @@ Template: twentynineteen
 .widget {
 	max-width: 33% !important;
 }
+
 /* ***********  Poner border de color al footer *********/
 div.site-info {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	border-top: 2px solid #820000;
 	background-color: black;
 	color: #0073aa !important;
@@ -299,4 +303,8 @@ h2:before {
 	display: none;
 }
 
-@import ('/css/style-hero.css');
+/* @import url('/css/style-hero.css'); */
+@import url('/css/servicios.css');
+
+/******************************************************* Sección precios Mowomo ****************************************************
+***************************************************************************************************************************************/
