@@ -8,11 +8,23 @@ Template: twentynineteen
 /************************************************************************************ 
 ********************** Header ******************************************************
 *************************************************************************************/
+:root {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	/* padding: 0 1em; */
+}
+
 #masthead.site-header {
 	border-bottom: 2px solid #820000;
 	max-height: 8rem !important;
-	background-color: black;
+	background: black;
 }
+.site-header .featured-image:after {
+	background: none;
+}
+
 .grid-container {
 	width: 80%;
 	margin: 0 auto;
@@ -113,7 +125,7 @@ Template: twentynineteen
 
 /* ***********  Poner border de color al footer *********/
 div.site-info {
-	position: fixed;
+	/* position: fixed;  Poner esto provoca que el footer se quede fijo en todas las páginas*/
 	bottom: 0;
 	width: 100%;
 	border-top: 2px solid #820000;
@@ -154,8 +166,9 @@ nav.footer-navigation {
 }
 
 article.blog {
-	max-width: 49%;
-	margin: 0 auto;
+}
+h2.entry-title a {
+	color: black;
 }
 .listado-entradas article:nth-child(1) {
 	min-width: 100% !important;
@@ -187,13 +200,21 @@ article.blog {
 	max-width: 33% !important;
 }
 article.blog {
+	max-width: 49%;
+	margin: 0 auto;
+	background-color: #0073aa;
 	border-radius: 10px 10px 10px 10px;
 	-moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 10px 10px 10px 10px;
 	border: 0px solid #000000;
-	background-color: cornsilk;
 	padding: .2rem;
 	margin-bottom: .5rem;
+}
+.svg-icon {
+	fill: darkred;
+}
+.entry-footer a {
+	color: #000000;
 }
 /* article.blog {
 	display: grid;
@@ -221,13 +242,11 @@ img.attachment-blog-grande {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-footer {
-	max-width: 100% !important;
-}
+
 /*************** Estilos al botón leer más */
 .roll-button {
-	background-color: #0073aa;
-	color: #fff;
+	background-color: black;
+	color: #fff !important;
 	display: inline-block;
 	text-align: center;
 	border-radius: 10px 10px 10px 10px;
