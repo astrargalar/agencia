@@ -1,4 +1,4 @@
-/* Sección precios Mowomo */
+/* Sección precios  */
 
 .servicios {
 	background: red;
@@ -192,4 +192,251 @@ img {
 
 .btn-accion span:hover {
 	text-decoration-line: underline;
+}
+
+/********************************************************************************************************/
+@media only screen and(min-width : 768px) {
+	.site-logo {
+		margin-bottom: 0;
+		position: absolute;
+		right: 0;
+		top: -17px;
+		z-index: 999;
+	}
+}
+@media screen and(min-width : 620px) {
+	.titulo-seccion {
+		padding: 3rem 1rem 2rem;
+	}
+}
+@media screen and(min-width : 620px) {
+	.listado-servicios {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-bottom: 2rem;
+	}
+}
+
+@media screen and(min-width : 620px) {
+	.servicio {
+		width: 49%;
+	}
+}
+
+@media screen and(min-width : 768px) {
+	.servicio {
+		width: 33%;
+	}
+}
+/**********************************/
+.servicios {
+	/* background: #fafafa; */
+	font-size: 18px;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+.contenedor-servicios {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+@media screen and(min-width : 620px) {
+	.titulo-seccion {
+		padding: 3rem 1rem 2rem;
+	}
+}
+.titulo-seccion {
+	font-size: 1.875rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2rem 1rem;
+	margin: 0 auto;
+}
+.max {
+	margin: 0 auto;
+	max-width: 1232px;
+	padding: .2rem 1rem;
+}
+@media screen and(min-width : 620px) {
+	.listado-servicios {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+@media screen and(min-width : 620px) {
+	.servicio {
+		width: 49%;
+	}
+}
+
+@media screen and(min-width : 768px) {
+	.servicio {
+		width: 33%;
+	}
+}
+.servicio {
+	background: #fff;
+	border: 1px solid #eee;
+	margin-bottom: 2.5rem;
+	border-radius: 0 0 10px 10px;
+	transition: transform .2s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+article {
+	display: block;
+}
+.servicio h2 {
+	font-size: 1.5rem;
+}
+.servicio p {
+	margin: 1rem 0;
+}
+.max {
+	color: #fff;
+}
+.servicio.banner-servicio-container {
+	position: relative;
+	padding-bottom: 55.4%;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+	background-color: #0073ac;
+}
+.servicio.banner-servicio {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	max-width: 100%;
+}
+article.servicio: hover {
+	z-index: 99;
+	transform: scale(1.05);
+	transition: .5 s ease-in-out;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.servicio.descripcion {
+	padding: .5rem 1rem 0;
+}
+.servicio.banner-servicio img {
+	display: block;
+	max-width: 100%;
+	margin-top: 2em;
+}
+
+img {
+	border-style: none;
+}
+.precio {
+	font-family: Montserrat, sans-serif;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 0.75;
+	display: flex;
+	justify-content: center;
+	color: rgb(34, 34, 34);
+	margin: 1rem 0px 1.5rem;
+}
+.precio.desde {
+	font-size: 35%;
+	font-weight: 300;
+	margin-bottom: 3px;
+}
+.precio.cantidad {
+	font-size: 150%;
+}
+.precio.euros-iva {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.precio.euros {
+	font-size: 100%;
+}
+.precio.iva {
+	font-size: 30%;
+	margin-top: 4px;
+}
+.servicio a {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-decoration: none !important;
+	color: #222;
+	height: 100%;
+}
+.servicio.btn-accion a,
+.servicio.btn-accion span {
+	min-width: 100% !important;
+	width: unset;
+	display: block;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 0 0 10px 10px;
+	/*text-decoration: none;*/
+}
+.btn-accion a,
+.servicio.btn-accion span {
+	background: #0073ac;
+	color: #fff;
+	display: inline-block;
+	padding: 0rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	max-width: 250px;
+	text-align: center;
+	transition: background .2s;
+	width: 100%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.btn-accion: hover {
+	text-decoration-line: underline;
+}
+.servicio.banner-servicio img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.nombre-servicio {
+	text-align: center;
+}
+.nombre-servicio p {
+	font-size: 1.2em;
+	text-align: center;
+}
+.barra-lateral {
+	clear: both !important;
+	font-size: 2.5rem;
+	margin-left: .1em;
+	margin-top: 1rem;
+	margin-bottom: -10px !important;
+}
+.tiempo {
+	margin-top: -.8rem;
+	margin-bottom: -1rem;
+	margin-left: .4em;
+	font-size: 1.1rem;
+}
+body {
+	background-color: blueviolet;
 }
