@@ -1,7 +1,7 @@
 /* Sección precios  */
 
 .servicios {
-	background: red;
+	/* background: red; */
 	font-size: 18px;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
@@ -74,7 +74,7 @@ article {
 	height: 0;
 	overflow: hidden;
 	clear: both;
-	background-color: #4cd0ff;
+	background-color: #0073ac;
 	/*background-color: black;*/
 }
 .servicio .banner-servicio {
@@ -96,7 +96,7 @@ article {
 }
 article.servicio:hover {
 	z-index: 9999;
-	transform: scale(1.15);
+	transform: scale(1.05);
 	transition: .5s ease-in-out;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -105,12 +105,7 @@ article.servicio:hover {
 .servicio .descripcion {
 	padding: .5rem 1rem 0;
 }
-/* .servicio .banner-servicio img {
-	display: block;
-	max-width: 100%;
-	margin-top: 2em;
-} */
-.servicio .banner-servicio img {
+.servicio.banner-servicio img {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -169,7 +164,6 @@ img {
 	text-transform: uppercase;
 	margin: 0;
 	border-radius: 0 0 10px 10px;
-	/*text-decoration: none;*/
 }
 
 .btn-accion a,
@@ -323,7 +317,7 @@ article {
 	align-items: center;
 	max-width: 100%;
 }
-article.servicio: hover {
+article .servicio :hover {
 	z-index: 99;
 	transform: scale(1.05);
 	transition: .5 s ease-in-out;
@@ -390,10 +384,9 @@ img {
 	text-transform: uppercase;
 	margin: 0;
 	border-radius: 0 0 10px 10px;
-	/*text-decoration: none;*/
 }
 .btn-accion a,
-.servicio.btn-accion span {
+.servicio .btn-accion span {
 	background: #0073ac;
 	color: #fff;
 	display: inline-block;
@@ -407,16 +400,20 @@ img {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
-.btn-accion: hover {
+.btn-accion:hover {
 	text-decoration-line: underline;
 }
-.servicio.banner-servicio img {
+.servicio .banner-servicio img {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50px, 50px);
+	-moz-transform: translate(-50px, 50px);
+	-webkit-transform: translate(-50px, 50px);
+	-o-transform: translate(-50px, 50px);
+	-ms-transform: translate(-50px, 50px);
 }
+
 .nombre-servicio {
 	text-align: center;
 }
@@ -436,7 +433,4 @@ img {
 	margin-bottom: -1rem;
 	margin-left: .4em;
 	font-size: 1.1rem;
-}
-body {
-	background-color: blueviolet;
 }

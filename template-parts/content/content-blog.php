@@ -25,12 +25,9 @@
 	<?php
 	// check if the post has a Post Thumbnail assigned to it.
 	if (has_post_thumbnail()) {
-		the_post_thumbnail();
-		//the_post_thumbnail('blog-grande');
+		echo '<a href="' . get_permalink($post->ID) . '" >' . get_the_post_thumbnail()  . '</a>'; //Ponemos el permalink a la imagen
 	}
 	?>
-
-
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
