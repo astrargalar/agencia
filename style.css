@@ -31,6 +31,7 @@
 		z-index: 999;
 	}
 }
+
 .custom-logo-link {
 	background: transparent !important;
 	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
@@ -325,9 +326,10 @@ h1:not(.site-title):before,
 h2:before {
 	display: none;
 }
-
-/* @import url('./css/style-hero.css');
-@import url('./css/servicios.css'); */
-
+.fondo_img {
+	background-color: whitesmoke;
+	-webkit-filter: saturate(150%);
+	filter: saturate(150%);
+}
 /***********************************************************************************************************
 ***********************************************************************************************************/
