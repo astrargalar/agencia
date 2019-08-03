@@ -334,10 +334,36 @@ h2:before {
 /*************************************Pagina Acerca de***************************************************
 ***********************************************************************************************************/
 .container-about {
-	/* width: 80%; */
-	margin: 0 auto;
 	display: flex;
 }
+@media only screen and (max-width: 767px) {
+	.container-about {
+		flex: column;
+	}
+	.side-bar {
+		margin: 1rem !important;
+		margin: 0 !important;
+		border: 2px solid #8b0000;
+		width: 100% !important;
+	}
+}
 .side-bar {
-	width: 66%;
+	margin-top: 3rem;
+	margin-left: -10%;
+	border: 2px solid #8b0000;
+	max-width: 20%;
+}
+.side-bar ul {
+	list-style: none;
+	padding-right: 1rem !important;
+}
+
+#primary.content-area-sidebar {
+	width: 80%;
+}
+aside.widget-area {
+	margin-top: 0;
+}
+hr {
+	background-color: #820000;
 }

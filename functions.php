@@ -89,14 +89,14 @@ function wps_post_thumbnail($html, $post_id, $post_image_id)
 function miplugin_register_sidebars()
 {
     register_sidebar(array(
-        "name" => "Sidebar lateral",
-        "id" => "sidebar-2",
-        "descripcion" => "Sidebar lateral",
-        "class" => "side-lateral",
-        "before_widget" => "<li id='%1$s' class='%2$s'>",
-        "after_widget" => "</li>",
-        "before_title" => "<h2 class='titulodelwidget'>",
-        "after_title" => "</h2>"
+        'name' => 'Sidebar lateral',
+        'id' => 'sidebar-2',
+        'descripcion' => 'Sidebar lateral',
+        'class' => 'side-bar',
+        'before_widget' => '<ul id="%1$s" class="%2$s"><li id="%1$s" class="%2$s">',
+        'after_widget' => '</li></ul>',
+        'before_title' => '<h3 class="titulodelwidget">',
+        'after_title' => '</h3>'
     ));
 }
 add_action('widgets_init', 'miplugin_register_sidebars');
