@@ -127,7 +127,7 @@
 .social-navigation ul.social-links-menu li a {
 	color: #820000;
 }
-@media only screen and(max-width:767px) {
+@media only screen and (max-width: 767px) {
 	.site-title,
 	.site-description,
 	.main-menu {
@@ -240,7 +240,15 @@ article.blog {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-
+@media only screen and (max-width: 767px) {
+	.listado-entradas article:nth-child(2),
+	.listado-entradas article:nth-child(3),
+	.listado-entradas article:nth-child(4),
+	.listado-entradas article:nth-child(5),
+	article .blog {
+		min-width: 100% !important;
+	}
+}
 /*************** Estilos al botón leer más */
 .roll-button {
 	background-color: black;
@@ -319,7 +327,8 @@ body {
 	min-width: 100%;
 }
 /* ********************** Eliminar las líneas separadoras de los títulos h1, h2 y posts */
-.entry.entry-title:before {
+.entry .entry-title:before,
+.entry .entry-header:before {
 	display: none;
 }
 h1:not(.site-title):before,
@@ -335,30 +344,48 @@ h2:before {
 ***********************************************************************************************************/
 .container-about {
 	display: flex;
-	font-size: 2vw;
+	width: 80%;
+	margin: 0 auto;
+	/* font-size: 2vw; */
 }
 #primary.content-area-sidebar {
 	width: 100%;
-	margin: 0 -10rem 0 0;
+	margin: 0;
+	/* margin: 0 -10rem 0 0; */
 }
-.content-area-bar article > p {
-	margin: 0 -10rem 0 0;
+#primary.content-area-sidebar article > p {
+	margin: 0 .5vw !important;
 }
+
 @media only screen and (min-width: 768px) {
-	.container-about {
-		font-size: 2vw;
+	.entry .entry-header {
+		margin: calc(3 * 1rem) calc(0% + 30px) 1rem;
 	}
+	.entry .entry-header:before {
+	}
+	.entry .entry-content > *,
+	.entry .entry-summary > * {
+		max-width: 100%;
+	}
+
+	.entry .entry-content,
+	.entry .entry-summary {
+		max-width: 100%;
+		margin: 0 1% 0 3% !important;
+		padding: 0;
+	}
+
 	.side-bar {
-		margin-top: 3rem;
+		/* margin-top: 3rem;
 		margin-left: 2%;
-		margin-right: 2%;
+		margin-right: 2%; */
 		border: 2px solid #8b0000;
 		max-width: 30%;
 	}
 	.side-bar ul {
 		list-style: none;
 		padding-right: 1rem !important;
-		font-size: 1vw;
+		font-size: 1.5vw;
 	}
 }
 
@@ -371,16 +398,14 @@ h2:before {
 	}
 
 	.side-bar {
-		margin: 1rem !important;
-		margin: 0 !important;
 		border: 2px solid #8b0000;
 		width: 80% !important;
-		margin-left: 3.5rem !important;
+		margin-left: 2rem !important;
 	}
 	.side-bar ul {
 		list-style: none;
 		padding-right: 1rem !important;
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 }
 
@@ -389,4 +414,63 @@ aside.widget-area {
 }
 hr {
 	background-color: #820000;
+}
+/* **********************************  Estilos botón Call to Action **********************************
+****************************************************************************************************/
+div.textwidget.custom-html-widget {
+	text-align: center;
+}
+
+.myButton {
+	-moz-box-shadow: 0 10px 14px -7px #276873;
+	-webkit-box-shadow: 0 10px 14px -7px #276873;
+	box-shadow: 0 10px 14px -7px #276873;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0073aa), color-stop(1, #408c99));
+	background: -moz-linear-gradient(top, #0073aa 5%, #408c99 100%);
+	background: -webkit-linear-gradient(top, #0073aa 5%, #408c99 100%);
+	background: -o-linear-gradient(top, #0073aa 5%, #408c99 100%);
+	background: -ms-linear-gradient(top, #0073aa 5%, #408c99 100%);
+	background: linear-gradient(to bottom, #0073aa 5%, #408c99 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0073aa', endColorstr='#408c99', GradientType=0);
+	background-color: #0073aa;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: inline-block;
+	margin: 0 auto;
+	cursor: pointer;
+	color: #ffffff !important;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #3d768a;
+}
+.myButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #0073aa));
+	background: -moz-linear-gradient(top, #408c99 5%, #0073aa 100%);
+	background: -webkit-linear-gradient(top, #408c99 5%, #0073aa 100%);
+	background: -o-linear-gradient(top, #408c99 5%, #0073aa 100%);
+	background: -ms-linear-gradient(top, #408c99 5%, #0073aa 100%);
+	background: linear-gradient(to bottom, #408c99 5%, #0073aa 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#0073aa', GradientType=0);
+	background-color: #408c99;
+}
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+/* **********************************  Estilos Widget últimas entradas **********************************
+****************************************************************************************************/
+.widget_text .widget_resumen {
+	font-size: 1.2vw !important;
+	font-weight: lighter;
+	display: inline-flex;
+}
+.widget_text .widget_resumen p {
+	margin: 0 !important;
+}
+.posts_content a > strong {
+	display: inline-block;
 }

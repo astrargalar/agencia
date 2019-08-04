@@ -27,6 +27,7 @@ function twenty_nineteen_child_theme_enqueue_styles()
 add_theme_support('editor-styles');
 add_theme_support('dark-editor-style');
 add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
+add_image_size('medio', 470, 174, true);
 
 //Función para poner el aviso de copyright y desde el año que funciona la web
 function crear_aviso_copyright()
@@ -95,8 +96,71 @@ function miplugin_register_sidebars()
         'class' => 'side-bar',
         'before_widget' => '<ul id="%1$s" class="%2$s"><li id="%1$s" class="%2$s">',
         'after_widget' => '</li></ul>',
-        'before_title' => '<h3 class="titulodelwidget">',
-        'after_title' => '</h3>'
+        'before_title' => '<h4 class="titulodelwidget">',
+        'after_title' => '</h4>'
     ));
 }
 add_action('widgets_init', 'miplugin_register_sidebars');
+
+// Habilita shortcodes en los widgets de texto (o no funcionaran. En el de Html no funcionan)
+add_filter('widget_text', 'do_shortcode');
+// Función que crea shortcode para mostrar últimas entradas con imágenes  
+//Crear shortcode en Worpress para mostrar las últimas entradas
+// Una vez creado el Shortcode, tenemos que añadir el código del mismo en la sección que queramos.
+// [recientes  limite="3" longitud_titulo="50" longitud_desc="50" thumbnail="1" tamano="50" categoria="2"]
+// Es bastante fácil de entender y de modificar:
+// Límite: Muestra el número de entradas que le especifiquemos.
+// Longitud_titulo, longitud_desc: Como su nombre indica, con esto controlamos la logitud del título y de la descripción.
+// Thumbnail: Si es 1 mostraremos la imagen destacada. Si es 0, no la mostraremos.
+// Tamano: Indicamos el tamaño de la imagen.
+// Categoria: Especificamos la categoria de la cual mostraremos las últimas entradas.
+
+add_shortcode('recientes', 'shortcode_recientes');
+function shortcode_recientes($atts, $content = null, $code)
+{
+
+    extract(shortcode_atts(array(
+        'limite' => 24,
+        'longitud_titulo' => 50,
+        'longitud_desc' => 80,
+        'thumbnail' => true,
+        'ancho' => '320',
+        'alto' => '150',
+        'categoria' => 1
+    ), $atts));
+
+    $query = array('cat' => $categoria, 'showposts' => $limite, 'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish', 'ignore_sticky_posts' => 1);
+
+    $q = new WP_Query($query);
+    if ($q->have_posts()) :
+        $salida  = '';
+        /* comienzo while */
+        while ($q->have_posts()) : $q->the_post();
+            $salida .= '<div class="services-grid">';
+            // $salida .= '<hr>';
+            if (has_post_thumbnail() && $thumbnail == true) :
+                $salida .= '<div class="image">';
+                $salida .= get_the_post_thumbnail(get_the_id(), array($ancho, $alto), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
+                $salida .= '<div class="hoverimage"></div>';
+                $salida .= '</div>';
+            endif;
+            $salida .= '<div class="posts_content">';
+            $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
+            $salida .= '<strong>';
+            $salida .= wp_html_excerpt(get_the_title(), $longitud_titulo);
+            $salida .= '</strong>';
+            $salida .= '</a>';
+
+            $excerpt = get_the_excerpt();
+            $salida .= ($excerpt) ? '<p class="widget_resumen">' . wp_html_excerpt($excerpt, $longitud_desc) . '...</p>' : '';
+            $salida .= '</div>';
+            $salida .= '</div>';
+        endwhile;
+        wp_reset_query();
+    /* fin while */
+
+    endif;
+
+    return $salida;
+}
+add_shortcode('recientes',    'shortcode_recientes');
