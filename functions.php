@@ -153,6 +153,8 @@ function shortcode_recientes($atts, $content = null, $code)
 
             $excerpt = get_the_excerpt();
             $salida .= ($excerpt) ? '<p class="widget_resumen">' . wp_html_excerpt($excerpt, $longitud_desc) . '...</p>' : '';
+            $salida .= '<hr class="fondo_news">';
+            $salida .= '<br>';
             $salida .= '</div>';
             $salida .= '</div>';
         endwhile;

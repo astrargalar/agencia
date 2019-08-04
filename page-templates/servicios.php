@@ -20,7 +20,7 @@ get_header();
 <!--  Inicio de la página de servicios -->
 <section class="servicios">
 
-	<h2 class="titulo-seccion max">Servicios WordPress que ofrecemos</h2>
+	<h2 class="titulo-seccion max">Nuestros Servicios WordPress para ti</h2>
 	<div class="container-servicios">
 		<div class="listado-servicios max">
 
@@ -237,7 +237,7 @@ get_header();
 <!-- <div class="site-info pie">
 	<?php $blog_info = get_bloginfo('name'); ?>
 	<?php if (!empty($blog_info)) : ?>
-																															<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
+																																<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
 	<?php endif; ?>
 	<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twentynineteen')); ?>" class="imprint">
 		<?php

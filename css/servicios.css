@@ -69,6 +69,10 @@ article {
 .servicio h2 {
 	font-size: 1.2rem;
 }
+h2.titulo-seccion.max {
+	text-transform: none;
+	letter-spacing: 13px;
+}
 .servicio p {
 	margin: 1rem 0;
 }
@@ -80,7 +84,6 @@ article {
 	overflow: hidden;
 	clear: both;
 	background-color: #0073ac;
-	/*background-color: black;*/
 }
 .servicio .banner-servicio {
 	background-repeat: no-repeat;

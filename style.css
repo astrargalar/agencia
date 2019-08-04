@@ -183,8 +183,6 @@ nav.footer-navigation {
 	margin: 0 auto;
 }
 
-article.blog {
-}
 h2.entry-title a {
 	color: black;
 }
@@ -361,8 +359,7 @@ h2:before {
 	.entry .entry-header {
 		margin: calc(3 * 1rem) calc(0% + 30px) 1rem;
 	}
-	.entry .entry-header:before {
-	}
+
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
 		max-width: 100%;
@@ -376,9 +373,6 @@ h2:before {
 	}
 
 	.side-bar {
-		/* margin-top: 3rem;
-		margin-left: 2%;
-		margin-right: 2%; */
 		border: 2px solid #8b0000;
 		max-width: 30%;
 	}
@@ -472,5 +466,11 @@ div.textwidget.custom-html-widget {
 	margin: 0 !important;
 }
 .posts_content a > strong {
-	display: inline-block;
+	display: inline;
+	font-size: smaller;
+}
+hr.fondo_news {
+	border-top: 1px solid #8c8b8b;
+	/* border-bottom: 1px solid #fff; */
+	background-color: #fff;
 }
