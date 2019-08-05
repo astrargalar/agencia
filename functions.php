@@ -21,13 +21,24 @@ function twenty_nineteen_child_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
-}
 
-//Habilitar modo oscuro del editor
-add_theme_support('editor-styles');
-add_theme_support('dark-editor-style');
-add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
-add_image_size('medio', 470, 174, true);
+    wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array('twenty-nineteen-child-styles'), '1.5.1', 'all');
+    // Scripts
+    // wp_enqueue_scripts('jquery');
+    wp_enqueue_script('leafle-js', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js', array(), '1.5.1', true);
+    wp_enqueue_script('mis-scripts', get_stylesheet_directory_uri() . '/js/mis-scripts.js', array(), '1.5.1', true);
+}
+function starter_setup()
+{
+    // Habilitar el modo oscuro para el editor
+    add_theme_support('editor-styles');
+    add_theme_support('dark-editor-style');
+
+    add_theme_support('title-tag');
+    add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
+    add_image_size('medio', 470, 174, true);
+}
+add_action('after_setup_theme', 'starter_setup');
 
 //Función para poner el aviso de copyright y desde el año que funciona la web
 function crear_aviso_copyright()
