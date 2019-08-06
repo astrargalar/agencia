@@ -514,8 +514,9 @@ hr.fondo_news {
 }
 .redes {
 	display: flex;
-	align-items: flex-end;
-	text-align: right;
+	flex-direction: row-reverse;
+	margin-right: 0;
+	background-color: #820000;
 }
 .redes a {
 	padding: 4px;
