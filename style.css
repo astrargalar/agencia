@@ -476,10 +476,47 @@ hr.fondo_news {
 }
 /************************************** Mapa con Leaflet.js ********************************
 ********************************************************************************************/
-#mapid {
+.content-map {
 	display: flex;
-	width: 100%;
-	height: 600px !important;
+	/* border: 1px solid brown; */
+	margin: 0 auto;
+}
+
+#mapid {
+	width: 70%;
+	height: 600px;
 	border: 1px solid brown;
-	background-color: transparent;
+	padding-bottom: 5rem;
+}
+.direcciones {
+	width: 30%;
+	margin-left: 5rem;
+	background-color: whitesmoke;
+}
+.direcciones p {
+	padding: 0 1rem;
+	text-align: center;
+	line-height: 2rem;
+}
+@media only screen and (max-width: 767px) {
+	.content-map {
+		display: block;
+	}
+	#mapid {
+		margin: 0 auto;
+		width: 100% !important;
+	}
+	.direcciones {
+		margin: 0 auto;
+		width: 100% !important;
+		margin-top: 5rem;
+	}
+}
+.redes {
+	display: flex;
+	align-items: flex-end;
+	text-align: right;
+}
+.redes a {
+	padding: 4px;
 }

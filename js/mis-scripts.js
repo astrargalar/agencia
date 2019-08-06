@@ -11,31 +11,47 @@
 	// 	document.getElementsByClassName('footer-widget-1').style.display = 'none';
 	// }
 });
-// var map = L.map('map', {
-// 	center: [ 55.751244, 37.618423 ],
-// 	zoom: 2
-// });
-
-// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-// 	maxZoom: 18,
-// 	id: 'mapbox.streets',
-// 	accessToken: 'pk.eyJ1IjoiaW5zYXRpYWJsZS1taW5kIiwiYSI6ImNqOWIwaWdrNjFjdDIzM24ya21qbGJuMzQifQ.EIK16areNxtGW7AyBTug6A'
-// }).addTo(map);
-
-// map.locate({
-// 	setView: true
-// });
-
-var mymap = L.map('mapid').setView([ 36.523464, -6.280382 ], 13);
+// Mapa de Leaflet
+var map = L.map('mapid').setView([ 36.523464, -6.2803823 ], 6); //Establecemos el mapa inicial
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	// Cargamos la hoja con las calles y el estilo que queramos
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+}).addTo(map);
 
-L.marker([ 36.523464, -6.280382 ])
-	.addTo(mymap)
-	.bindPopup('Aquí me puedes encontrar.<br> Incluso en la segunda línea.')
-	.openPopup();
-if ($('#mapid').length == 0) {
-	console.log('El div #mapid no se ha cargado en el dom');
+var startmarkers = [
+	// Creamos los marcadores que necesitemos (ojo, como es un array  empieza por 0)
+	[
+		'Cádiz', // Elemento 0
+		36.523464, // Elemento 1
+		-6.2803823, // Elemento 2
+		'./Sedes/LapaginadeCadiz.html', // Elemento 3
+		'Aquí me puedes encontrar.<br> Incluso en la segunda línea.' // Elemento 4
+	],
+	[
+		'Chiclana',
+		36.425441,
+		-6.153263,
+		'./Sedes/LapaginadeChiclana.html', //Cambiar por la específica de la oficina que sea
+		'Aquí nuestras oficinas de.<br> Chiclana - Cádiz.'
+	]
+];
+
+mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>'; // Este será nuesto mapa definitivo
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; ' + mapLink + ' Contributors',
+	maxZoom: 18
+}).addTo(map);
+
+let arrayOfMarkers = [];
+for (let i = 0; i < startmarkers.length; i++) {
+	marker = new L.marker([ startmarkers[i][1], startmarkers[i][2] ])
+		.bindPopup('<a href="' + startmarkers[i][3] + '">' + startmarkers[i][0] + '<br>' + startmarkers[i][4])
+		.addTo(map);
+
+	arrayOfMarkers.push([ startmarkers[i][1], startmarkers[i][2] ]);
 }
+console.log(arrayOfMarkers); // Listamos el array en la consola para comprobar que se carga correctamente. Luego no es necesario
+
+var bounds = new L.LatLngBounds(arrayOfMarkers); //Con esto centramos el mapa al máximo zoom siempre que se vean todos nuestros marcadores
+map.fitBounds(bounds);

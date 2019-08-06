@@ -24,7 +24,8 @@ function twenty_nineteen_child_theme_enqueue_styles()
 
     wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array('twenty-nineteen-child-styles'), '1.5.1', 'all');
     // Scripts
-    // wp_enqueue_scripts('jquery');
+
+    wp_enqueue_script('jquery');
     wp_enqueue_script('leafle-js', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js', array(), '1.5.1', true);
     wp_enqueue_script('mis-scripts', get_stylesheet_directory_uri() . '/js/mis-scripts.js', array(), '1.5.1', true);
 }
