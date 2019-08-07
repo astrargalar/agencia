@@ -1,16 +1,19 @@
-(function() {
-	'use strict';
+(function($) {
+	// 'use strict';
 
-	$ = jQuery.noConflict();
+	// $ = jQuery.noConflict();
 
-	$(document).on('mouseover', '.container .column', function() {
+	$(document).on('mouseover', '.container-hero .column', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
-
+	$(document).on('mouseover', '.container-hero .column', function() {
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	// alert('Se está ejecutando JQuery $');
 	// function ocultar() {
 	// 	document.getElementsByClassName('footer-widget-1').style.display = 'none';
 	// }
-});
+})(jQuery);
 // Mapa de Leaflet
 var map = L.map('mapid').setView([ 36.523464, -6.2803823 ], 6); //Establecemos el mapa inicial
 

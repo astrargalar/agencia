@@ -21,7 +21,12 @@ function twenty_nineteen_child_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
-
+    wp_enqueue_style(
+        'hero',
+        get_stylesheet_directory_uri() . '/css/style-hero.css',
+        array(),
+        wp_get_theme()->get('Version')
+    );
     wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array('twenty-nineteen-child-styles'), '1.5.1', 'all');
     // Scripts
 
