@@ -28,13 +28,13 @@ get_header();
 			<div class="box">
 				<div class="banner-servicio-container">
 					<div class="banner-servicio">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/email_marketing.png" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/market.png" alt="">
 					</div>
 				</div>
-				<h2>Adaptamos plantillas a tu negocio</h2>
-				<p>Busca tu plantilla favorita y te la adaptamos por menos de lo que crees.</p>
+				<h2>Personalizamos plantillas</h2>
+				<p>Adaptamos cualquier plantilla comercial multipropósito a tu negocio por menos de lo que imaginas.</p>
 				<div class="btn-accion">
-					<a href=" ./adaptamos-plantillas/"> <span>Más información</span> </a>
+					<a href=" ./tarifas/"> <span>Más información</span> </a>
 				</div>
 			</div>
 		</div>
@@ -52,7 +52,7 @@ get_header();
 				<h2>Mantenimiento WordPress</h2>
 				<p>Tu sitio web al día evitará problemas de seguridad y falta de rendimiento.</p>
 				<div class="btn-accion">
-					<a href="./mantenimiento-wordpress/"><span>Más información</span></a>
+					<a href="./tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>
@@ -68,9 +68,9 @@ get_header();
 					</div>
 				</div>
 				<h2>Alta en Google My Business</h2>
-				<p>Te configuramos tu negocio para que aparezcas destacado en Google My Business.</p>
+				<p>Creamos la ficha de tu negocio para que aparezcas en los primeros puestos de los buscadores.</p>
 				<div class="btn-accion">
-					<a href="./gestion-mybusiness/"><span>Más información</span></a>
+					<a href="./tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@ get_header();
 				<h2>WordPress a medida</h2>
 				<p>Creamos un sitio web expresamente concebido para tu negocio o tu blog.</p>
 				<div class="btn-accion">
-					<a href="./tema-blog-wordpress-a-medida/"><span>Más información</span></a>
+					<a href="./tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>

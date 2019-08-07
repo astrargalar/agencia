@@ -21,7 +21,7 @@ get_header();
 
 <div class="container">
 	<div class="column active">
-		<h2>Aquí nos puedes encontrar</h2>
+		<h2>Aquí me puedes encontrar</h2>
 		<div class="content-map">
 			<div id="mapid" class="map"></div>
 			<div class="direcciones">

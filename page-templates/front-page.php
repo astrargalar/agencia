@@ -16,10 +16,11 @@
  */
 
 get_header();
+
 ?>
 <div class="container-portada">
-	<span class="texto1">Bienvenido</span>
-	<span class="texto2">al taller de Astrargalar</span>
+	<span class="texto1">BIENVENIDO</span>
+	<span class="texto2">WordPress PARA TU EMPRESA</span>
 </div>
 <div class="site-info pie">
 	<?php $blog_info = get_bloginfo('name'); ?>
