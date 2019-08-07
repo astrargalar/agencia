@@ -113,3 +113,7 @@ header {
 	width: 100%;
 	margin: 0 auto;
 }
+.box .banner-servicio-container img {
+	/* margin-left: 3rem; */
+	margin: 0 auto !important;
+}

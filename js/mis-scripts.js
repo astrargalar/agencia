@@ -1,9 +1,10 @@
 (function($) {
-	// 'use strict';
+	// 'use strict'; Esto no sirve
 
-	// $ = jQuery.noConflict();
+	// $ = jQuery.noConflict(); Esto ya lo pone WordPress por defecto
 
 	$(document).on('mouseover', '.container-hero .column', function() {
+		$('.site-header').hide(40);
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 	$(document).on('mouseover', '.container-hero .column', function() {
