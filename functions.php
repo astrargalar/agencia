@@ -131,53 +131,72 @@ add_filter('widget_text', 'do_shortcode');
 // Thumbnail: Si es 1 mostraremos la imagen destacada. Si es 0, no la mostraremos.
 // Tamano: Indicamos el tamaño de la imagen.
 // Categoria: Especificamos la categoria de la cual mostraremos las últimas entradas.
-
-add_shortcode('recientes', 'shortcode_recientes');
+//http://programacionmultimedia.net/php-entradas-recientes-con-imagen-destacada-en-wordpress-via-shortcode/
 function shortcode_recientes($atts, $content = null, $code)
 {
 
+    //Uso: [recientes  limite="3" longitud_titulo="50" longitud_desc="50" thumbnail="1" tamano="50"]
+    //thumbnail="1" muestra imagen destacada. thumbnail="0" no muestra la imagen
     extract(shortcode_atts(array(
-        'limite' => 24,
+        'limite' => 5,
         'longitud_titulo' => 50,
         'longitud_desc' => 80,
-        'thumbnail' => true,
-        'ancho' => '320',
-        'alto' => '150',
-        'categoria' => 1
+        'thumbnail' => 1,
+        'tamano' => 65
+
+
     ), $atts));
 
-    $query = array('cat' => $categoria, 'showposts' => $limite, 'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish', 'ignore_sticky_posts' => 1);
+    $query = array('showposts' => $limite,  'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish', 'ignore_sticky_posts' => 1);
 
     $q = new WP_Query($query);
     if ($q->have_posts()) :
         $salida  = '';
+        $salida .= '<ol class="listado-recientes">';
+
         /* comienzo while */
         while ($q->have_posts()) : $q->the_post();
-            $salida .= '<div class="services-grid">';
-            // $salida .= '<hr>';
+            $salida .= '<li>';
             if (has_post_thumbnail() && $thumbnail == true) :
-                $salida .= '<div class="image">';
-                $salida .= get_the_post_thumbnail(get_the_id(), array($ancho, $alto), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
-                $salida .= '<div class="hoverimage"></div>';
-                $salida .= '</div>';
+                $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
+                $salida .= get_the_post_thumbnail(get_the_id(), array($tamano, $tamano), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
+                $salida .= '</a>';
             endif;
+
             $salida .= '<div class="posts_content">';
             $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
-            $salida .= '<strong>';
             $salida .= wp_html_excerpt(get_the_title(), $longitud_titulo);
-            $salida .= '</strong>';
-            $salida .= '</a>';
+            $salida .= '</a> <br>';
+            // $salida .= '<p>';
+
+            /* Calculo las categorías  */
+
+            // $categories = get_the_category();
+            // $separator = ' ';
+            // $output = '';
+            // if ($categories) {
+            //     foreach ($categories as $category) {
+            //         $output .= $category->cat_name . '' . $separator;
+            //     }
+            //     $salida .= trim($output, $separator);
+            // }
+            // $salida .= '</p>';
+            /* Escribo fecha  */
+            // $salida .= '<p>' . get_the_time() . '</p>';
+
+            /* Escribo extracto  */
 
             $excerpt = get_the_excerpt();
-            $salida .= ($excerpt) ? '<p class="widget_resumen">' . wp_html_excerpt($excerpt, $longitud_desc) . '...</p>' : '';
-            $salida .= '<hr class="fondo_news">';
-            $salida .= '<br>';
+            $salida .= ($excerpt) ? '<p>' . wp_html_excerpt($excerpt, $longitud_desc) . '...</p>' : '';
+
             $salida .= '</div>';
-            $salida .= '</div>';
+            $salida .= '</li>';
+            $salida .= '<hr>';
         endwhile;
         wp_reset_query();
-    /* fin while */
+        /* fin while */
 
+        $salida .= '</ol>';
     endif;
 
     return $salida;

@@ -25,7 +25,7 @@
 .container,
 .container-about {
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 1000px !important;
 }
 @media only screen and (min-width: 768px) {
 	.site-logo {
@@ -366,7 +366,31 @@ h2:before {
 #primary.content-area-sidebar article > p {
 	margin: 0 .5vw !important;
 }
-@media only screen and (min-width: 768px) {
+ol {
+	list-style: none !important;
+	counter-reset: li;
+}
+ol li {
+	counter-increment: li;
+	list-style: none !important;
+}
+ol li:before {
+	display: flex;
+	content: counter(li);
+	font-size: 3rem;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+	transform: translate(-50%, -30%);
+}
+ul {
+	list-style: none !important;
+}
+.listado-recientes {
+	display: flex;
+	flex-direction: column;
+}
+@media only screen and(min-width: 768px) {
 	.entry .entry-header {
 		margin: calc(3 * 1rem) calc(0% + 30px) 1rem;
 	}
@@ -407,6 +431,7 @@ h2:before {
 		list-style: none;
 		padding-right: 1rem !important;
 		font-size: 3vw;
+		counter-reset: li; /* *********************** Esto establece contadores delante de los post **************************** */
 	}
 }
 aside.widget-area {
