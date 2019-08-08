@@ -22,6 +22,11 @@
 	hyphens: auto !important;
 	/* padding: 0 1em; */
 }
+.container,
+.container-about {
+	margin: 0 auto;
+	max-width: 1000px;
+}
 @media only screen and (min-width: 768px) {
 	.site-logo {
 		margin-bottom: 0;
@@ -46,7 +51,7 @@
 #masthead.site-header {
 	border-bottom: 2px solid #820000;
 	max-height: 8rem !important;
-	background: black;
+	background-image: linear-gradient(to top, #434343 0%, black 80%);
 }
 .site-header .featured-image:after {
 	background: none;
@@ -149,7 +154,8 @@ div.site-info {
 	bottom: 0;
 	width: 100%;
 	border-top: 2px solid #820000;
-	background-color: black;
+	background-image: linear-gradient(to bottom, #434343 0%, black 80%);
+
 	color: #0073aa !important;
 	padding: 1rem 0;
 	margin: auto !important;

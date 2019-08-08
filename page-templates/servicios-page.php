@@ -32,7 +32,7 @@ get_header();
 					</div>
 				</div>
 				<h2>Personalizamos plantillas</h2>
-				<p>Adaptamos cualquier plantilla comercial multipropósito a tu negocio por menos de lo que imaginas.</p>
+				<p>Adaptamos cualquier plantilla comercial a tu negocio por menos de lo que imaginas.</p>
 				<div class="btn-accion">
 					<a href=" ./tarifas/"> <span>Más información</span> </a>
 				</div>
