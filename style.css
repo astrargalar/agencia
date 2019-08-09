@@ -434,6 +434,11 @@ ul {
 		counter-reset: li; /* *********************** Esto establece contadores delante de los post **************************** */
 	}
 }
+.posts_content p {
+	margin-top: -2rem;
+	display: inline-block;
+	font-size: smaller;
+}
 aside.widget-area {
 	margin-top: 0;
 }

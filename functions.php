@@ -142,16 +142,16 @@ function shortcode_recientes($atts, $content = null, $code)
         'longitud_titulo' => 50,
         'longitud_desc' => 80,
         'thumbnail' => 1,
-        'tamano' => 65
-
-
+        'tamano' => 65,
+        'categorias' => 1
     ), $atts));
 
-    $query = array('showposts' => $limite,  'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish', 'ignore_sticky_posts' => 1);
+    $query = array('cat' => $categorias, 'showposts' => $limite,   'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish', 'ignore_sticky_posts' => 1);
 
     $q = new WP_Query($query);
     if ($q->have_posts()) :
         $salida  = '';
+
         $salida .= '<ol class="listado-recientes">';
 
         /* comienzo while */
@@ -166,7 +166,7 @@ function shortcode_recientes($atts, $content = null, $code)
             $salida .= '<div class="posts_content">';
             $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
             $salida .= wp_html_excerpt(get_the_title(), $longitud_titulo);
-            $salida .= '</a> <br>';
+            $salida .= '</a>';
             // $salida .= '<p>';
 
             /* Calculo las categorías  */
@@ -192,6 +192,7 @@ function shortcode_recientes($atts, $content = null, $code)
             $salida .= '</div>';
             $salida .= '</li>';
             $salida .= '<hr>';
+            $salida .= '<br>';
         endwhile;
         wp_reset_query();
         /* fin while */
