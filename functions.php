@@ -151,7 +151,8 @@ function shortcode_recientes($atts, $content = null, $code)
     $q = new WP_Query($query);
     if ($q->have_posts()) :
         $salida  = '';
-
+        $alto = ($tamano * .564971751412);
+        // var_dump($alto);
         $salida .= '<ol class="listado-recientes">';
 
         /* comienzo while */
@@ -159,7 +160,7 @@ function shortcode_recientes($atts, $content = null, $code)
             $salida .= '<li>';
             if (has_post_thumbnail() && $thumbnail == true) :
                 $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
-                $salida .= get_the_post_thumbnail(get_the_id(), array($tamano, $tamano), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
+                $salida .= get_the_post_thumbnail(get_the_id(), array($tamano, $alto), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
                 $salida .= '</a>';
             endif;
 
