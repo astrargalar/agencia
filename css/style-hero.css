@@ -3,10 +3,10 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 	background: #000;
+	width: 100% !important;
 }
-
 .container-hero {
-	width: 100%;
+	width: 100% !important;
 	height: 100vh !important;
 	overflow: hidden;
 	margin: 0 auto;
