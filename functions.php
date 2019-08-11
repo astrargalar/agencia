@@ -1,8 +1,8 @@
 <?php
 // // Adding Stylesheet both parent and child theme
 
-add_action('wp_enqueue_scripts', 'twenty_nineteen_child_theme_enqueue_styles');
-function twenty_nineteen_child_theme_enqueue_styles()
+add_action('wp_enqueue_scripts', 'twentynineteenchild_enqueue_styles');
+function twentynineteenchild_enqueue_styles()
 {
 
     $parent_style = 'twenty-nineteen-parent-theme-styles'; // This is 'twentynineteen-parent-theme-styles' for the Twenty Nineteen theme.
@@ -34,7 +34,7 @@ function twenty_nineteen_child_theme_enqueue_styles()
     wp_enqueue_script('leafle-js', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js', array(), '1.5.1', true);
     wp_enqueue_script('mis-scripts', get_stylesheet_directory_uri() . '/js/mis-scripts.js', array(), '1.5.1', true);
 }
-function starter_setup()
+function twentynineteenchild_starter_setup()
 {
     // Habilitar el modo oscuro para el editor
     add_theme_support('editor-styles');
@@ -44,7 +44,7 @@ function starter_setup()
     add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
     add_image_size('medio', 470, 174, true);
 }
-add_action('after_setup_theme', 'starter_setup');
+add_action('after_setup_theme', 'twentynineteenchild_starter_setup');
 
 //Función para poner el aviso de copyright y desde el año que funciona la web
 function crear_aviso_copyright()
@@ -92,7 +92,7 @@ function boton_excerpt_more($more)
 {
     global $post;
     // return '… <a href="' . get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>'; Así pondría solo el texto Read mores, sin botón
-    return $more . '<a href="' . esc_url(get_permalink()) . '" class="roll-button">' . esc_html__(' Leer más...', 'twentynineteen') . '</a>';
+    return $more . '<a href="' . esc_url(get_permalink()) . '" class="roll-button">' . esc_html__(' Leer más...', 'twentynineteenchild') . '</a>';
 }
 add_filter('excerpt_more', 'boton_excerpt_more');
 

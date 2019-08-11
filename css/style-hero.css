@@ -13,7 +13,7 @@ body {
 }
 .container-hero .column {
 	width: 25%; /*********************************** Cambiando este % podemos ir creando más columnas, luego la tenemos que crear en servicios-page.php *********************/
-	height: 100% !important;
+	height: 103% !important;
 	float: left;
 	border-right: 2px solid rgba(0, 0, 0, .5);
 	box-sizing: border-box;
@@ -78,7 +78,7 @@ body {
 	background-image: url(../images/bg1.jpg);
 	/* Es importante poner dos puntos antes del directorio para que primero retroceda hasta donde está el style.css y luego suba al directorio /images */
 	background-size: cover;
-	min-height: 104vh;
+	min-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
@@ -86,7 +86,7 @@ body {
 .container-hero .column.active .bg.bg2 {
 	background-image: url(../images/bg2.jpg);
 	background-size: cover;
-	min-height: 104vh;
+	min-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
@@ -94,7 +94,7 @@ body {
 .container-hero .column.active .bg.bg3 {
 	background-image: url(../images/bg3.jpg);
 	background-size: cover;
-	min-height: 104vh;
+	min-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;
@@ -102,7 +102,7 @@ body {
 .container-hero .column.active .bg.bg4 {
 	background-image: url(../images/bg4.jpg);
 	background-size: cover;
-	min-height: 104vh;
+	min-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	transition: 0.5s;

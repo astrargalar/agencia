@@ -9,7 +9,7 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, single-column, responsive-layout, accessibility-ready,
- Text Domain:  twenty-nineteen-child-theme
+ Text Domain:  twentynineteenchild
  */
 /**************************** Generales ********************************************
 ************************************************************************************/
@@ -566,14 +566,14 @@ div.textwidget.custom-html-widget {
 	margin: 0 auto;
 }
 #mapid {
-	width: 70%;
+	width: 80%;
 	height: 600px;
 	border: 1px solid brown;
 	padding-bottom: 5rem;
 }
 .direcciones {
-	width: 30%;
-	margin-left: 5rem;
+	width: 20%;
+	margin-left: 1rem;
 	background-color: whitesmoke;
 }
 .direcciones p {
