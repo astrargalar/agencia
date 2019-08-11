@@ -157,7 +157,7 @@ function shortcode_recientes($atts, $content = null, $code)
 
         /* comienzo while */
         while ($q->have_posts()) : $q->the_post();
-            $salida .= '<li>';
+            $salida .= '<li class="margentop">';
             if (has_post_thumbnail() && $thumbnail == true) :
                 $salida .= '<a href="' . get_permalink() . '" title="' . sprintf("Enlace permanente a %s", get_the_title()) . '">';
                 $salida .= get_the_post_thumbnail(get_the_id(), array($tamano, $alto), array('title' => get_the_title(), 'alt' => get_the_title(), 'class' => 'imageborder alignleft'));
