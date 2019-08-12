@@ -83,7 +83,8 @@ h2.titulo-seccion.max {
 	height: 0;
 	overflow: hidden;
 	clear: both;
-	background-color: #0073ac;
+	background-color: var(--header-footer-bg-color);
+	/* background-color: hsl(235, 100%, 33%); */
 }
 .servicio .banner-servicio {
 	background-repeat: no-repeat;
@@ -180,7 +181,9 @@ img {
 
 .btn-accion a,
 .servicio .btn-accion span {
-	background: #0073ac;
+	background: var(--header-footer-bg-color);
+
+	/* background-color: hsl(235, 100%, 33%); */
 	color: #fff;
 	display: inline-block;
 	padding: 0;

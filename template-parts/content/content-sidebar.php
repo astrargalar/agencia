@@ -20,6 +20,7 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
+
 		<?php
 		the_content(
 			sprintf(
@@ -43,6 +44,7 @@
 			)
 		);
 		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

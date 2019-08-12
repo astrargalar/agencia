@@ -38,11 +38,14 @@ function twentynineteenchild_starter_setup()
 {
     // Habilitar el modo oscuro para el editor
     add_theme_support('editor-styles');
+    add_theme_support('wp-block-styles');
     add_theme_support('dark-editor-style');
 
     add_theme_support('title-tag');
     add_image_size('blog-grande', 600, 300, true); // Hard Crop Mode
     add_image_size('medio', 470, 174, true);
+    // $accent_color = get_theme_mod('primary_color_hue', 199);
+    // var_dump(get_theme_mod(background_color()));
 }
 add_action('after_setup_theme', 'twentynineteenchild_starter_setup');
 

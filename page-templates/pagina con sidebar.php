@@ -43,6 +43,7 @@ get_header();
 	</section><!-- .content-area -->
 	<div class="side-bar">
 		<?php dynamic_sidebar("sidebar-2"); ?>
+		<div id="mapid"></div>
 	</div><!-- side-bar -->
 </div><!-- container -->
 <?php

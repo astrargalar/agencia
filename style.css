@@ -19,6 +19,11 @@
 	-ms-hyphens: auto;
 	hyphens: auto !important;
 	/* padding: 0 1em; */
+	--main-bg-color: lime;
+	--header-footer-bg-color: limegreen;
+}
+body {
+	background-color: var(--main-bg-color);
 }
 /* ********************** Eliminar las líneas separadoras de los títulos h1, h2 y posts */
 .entry .entry-title:before,
@@ -61,9 +66,10 @@ h2:before {
 }
 
 #masthead.site-header {
-	border-bottom: 2px solid #820000;
+	/* border-bottom: 2px solid #820000; */
 	max-height: 8rem !important;
-	background-image: linear-gradient(to top, #434343 0%, black 80%);
+	/* background-image: linear-gradient(to top, #434343 0%, black 80%); */
+	background: var(--header-footer-bg-color);
 }
 .site-header .featured-image:after {
 	background: none;
@@ -153,49 +159,7 @@ h2:before {
 		font-size: 10px !important;
 	}
 }
-/************************************************************************************ 
-********************** Footer ******************************************************
-*************************************************************************************/
-.widget {
-	max-width: 33% !important;
-}
 
-/* ***********  Poner border de color al footer *********/
-div.site-info {
-	/* position: fixed;  Poner esto provoca que el footer se quede fijo en todas las páginas*/
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	border-top: 2px solid #820000;
-	background-image: linear-gradient(to bottom, #434343 0%, black 80%);
-
-	color: #0073aa !important;
-	padding: 1rem 0 !important;
-	margin: auto !important;
-}
-/************  Creamos el Grid template *********/
-
-div.site-info {
-	display: grid;
-	grid-template-columns: auto 1fr 1fr auto;
-	grid-template-rows: auto;
-	grid-template-areas: ". titulo descripcion nav2";
-	max-width: 100vw !important;
-}
-a.site-name {
-	grid-area: titulo;
-	text-align: right;
-}
-a.imprint {
-	grid-area: descripcion;
-	text-align: center;
-}
-nav.footer-navigation {
-	grid-area: nav2;
-	padding-right: 1rem;
-	text-align: right;
-	max-width: 100% !important;
-}
 /************************************************************************************ 
 ********************** Footer ******************************************************
 *************************************************************************************/
@@ -208,9 +172,9 @@ div.site-info {
 	/* position: fixed;  Poner esto provoca que el footer se quede fijo en todas las páginas*/
 	bottom: 0;
 	width: 100%;
-	border-top: 2px solid #820000;
-	background-image: linear-gradient(to bottom, #434343 0%, black 80%);
-
+	/* border-top: 2px solid #820000; */
+	/* background-image: linear-gradient(to bottom, #434343 0%, black 80%); */
+	background: var(--header-footer-bg-color);
 	color: #0073aa !important;
 	padding: 1rem 0 !important;
 	margin: auto !important;
@@ -281,10 +245,11 @@ h2.entry-title a {
 article.blog {
 	max-width: 49%;
 	margin: 0 auto 0.5rem;
-	background-color: #0073aa;
+	background-color: var(--header-footer-bg-color);
+	/* background-color: #0073aa;
 	border-radius: 10px 10px 10px 10px;
 	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px; */
 	border: 0 solid #000000;
 	padding: 0.2rem;
 }
@@ -336,15 +301,7 @@ article.blog {
 	font-family: sans-serif;
 	transition: ease;
 }
-body {
-	background: #2980b9; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #2c3e50, #2980b9); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to left,
-		#a2a2a2,
-		#a1a1a1
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 .container-portada {
 	text-align: center;
 	position: absolute;
@@ -364,7 +321,8 @@ body {
 	font-weight: 700;
 	letter-spacing: 8px;
 	margin-bottom: 20px;
-	background: #333;
+	/* background: #333; */
+	background: var(--header-footer-bg-color);
 	position: relative;
 	animation: text 3s 1;
 }
@@ -412,6 +370,10 @@ body {
 }
 .posts_content {
 	margin-top: -0.44rem;
+}
+.titulodelwidget {
+	text-align: center;
+	background-color: var(--header-footer-bg-color);
 }
 #primary.content-area-sidebar article > p {
 	margin: 0 0.5vw !important;
@@ -473,9 +435,9 @@ ul {
 		padding: 0 !important;
 	}
 	.side-bar {
-		border: 2px solid #8b0000;
-		max-width: 30%;
-		margin: 3rem 0;
+		/* border: 2px solid #8b0000; */
+		max-width: 33%;
+		margin: 3rem .5rem;
 	}
 	.side-bar ul {
 		list-style: none;
@@ -491,7 +453,7 @@ ul {
 		width: 60%;
 	}
 	.side-bar {
-		border: 2px solid #8b0000;
+		/* border: 2px solid #8b0000; */
 		max-width: 33% !important; /* margin-left: 2rem !important; */
 		max-width: 300px !important;
 	}
@@ -512,7 +474,7 @@ aside.widget-area {
 	margin-top: 0;
 }
 hr {
-	background-color: #820000;
+	/* background-color: #820000; */
 }
 /* **********************************  Estilos botón Call to Action **********************************
 *************************************************************************************************** */
@@ -520,7 +482,7 @@ div.textwidget.custom-html-widget {
 	text-align: center;
 }
 .myButton {
-	-moz-box-shadow: 0 10px 14px -7px #276873;
+	/* -moz-box-shadow: 0 10px 14px -7px #276873;
 	-webkit-box-shadow: 0 10px 14px -7px #276873;
 	box-shadow: 0 10px 14px -7px #276873;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0073aa), color-stop(1, #408c99));
@@ -530,7 +492,9 @@ div.textwidget.custom-html-widget {
 	background: -ms-linear-gradient(top, #0073aa 5%, #408c99 100%);
 	background: linear-gradient(to bottom, #0073aa 5%, #408c99 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0073aa', endColorstr='#408c99', GradientType=0);
-	background-color: #0073aa;
+	background-color: #0073aa; */
+	background-color: hsl(235, 100%, 33%);
+
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -568,7 +532,7 @@ div.textwidget.custom-html-widget {
 #mapid {
 	width: 80%;
 	height: 600px;
-	border: 1px solid brown;
+	/* border: 1px solid brown; */
 	padding-bottom: 5rem;
 }
 .direcciones {
