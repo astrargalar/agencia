@@ -27,6 +27,7 @@ function twentynineteenchild_enqueue_styles()
         array(),
         wp_get_theme()->get('Version')
     );
+    wp_enqueue_style('animated', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css', array('twenty-nineteen-child-styles'), '3.7.2', 'all');
     wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', array('twenty-nineteen-child-styles'), '1.5.1', 'all');
     // Scripts
 

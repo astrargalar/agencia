@@ -27,11 +27,11 @@ get_header();
 			<div class="direcciones">
 				<?php get_template_part('template-parts/content/content-redes'); ?>
 				<!-- Agrego el contenido de las redes sociales en un template part para poder reutilizarlo -->
-				<hr>
+				<!-- <hr> -->
 				<p>Cádiz - Avenida de las Cortes de Cádiz - 11005</p>
-				<hr>
+				<!-- <hr> -->
 				<p>Chiclana - Avenida Severo Ochoa s/n - 11130</p>
-				<hr>
+				<!-- <hr> -->
 			</div>
 		</div>
 		<?php get_template_part('template-parts/content/content-loop'); ?>

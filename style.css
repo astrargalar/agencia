@@ -19,8 +19,8 @@
 	-ms-hyphens: auto;
 	hyphens: auto !important;
 	/* padding: 0 1em; */
-	--main-bg-color: lime;
-	--header-footer-bg-color: limegreen;
+	--main-bg-color: rgba(148, 212, 166, 0.61);
+	--header-footer-bg-color: rgba(148, 211, 123, 0.452);
 }
 body {
 	background-color: var(--main-bg-color);
@@ -322,7 +322,7 @@ article.blog {
 	letter-spacing: 8px;
 	margin-bottom: 20px;
 	/* background: #333; */
-	background: var(--header-footer-bg-color);
+	/* background: var(--header-footer-bg-color); */
 	position: relative;
 	animation: text 3s 1;
 }
@@ -538,12 +538,15 @@ div.textwidget.custom-html-widget {
 .direcciones {
 	width: 20%;
 	margin-left: 1rem;
-	background-color: whitesmoke;
+	background-color: var(--main-bg-color);
 }
 .direcciones p {
 	padding: 0 1rem;
-	text-align: center;
-	line-height: 2rem;
+	/* text-align: center; */
+	hyphens: auto;
+	/* line-height: 2rem; */
+	border-bottom: 1px solid white;
+	font-size: medium;
 }
 @media only screen and(max-width: 767px) {
 	.content-map {
@@ -562,7 +565,8 @@ div.textwidget.custom-html-widget {
 	display: flex;
 	flex-direction: row-reverse;
 	margin-right: 0;
-	background-color: #820000;
+	background-color: var(--header-footer-bg-color);
+	border: 1px solid white;
 }
 .redes a {
 	padding: 4px;
