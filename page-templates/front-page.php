@@ -20,7 +20,7 @@ get_header();
 ?>
 <div class="container-portada">
 	<span class="texto1">¡¡BIENVENIDO!!</span>
-	<span class="texto2 rubberBand animated delay-2s">TODO WordPress PARA TU EMPRESA</span>
+	<span class="texto2">TODO WordPress PARA TU EMPRESA</span>
 </div>
 <div class="site-info pie">
 	<?php $blog_info = get_bloginfo('name'); ?>
