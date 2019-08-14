@@ -22,7 +22,7 @@
 	<div class="site-info">
 		<?php $blog_info = get_bloginfo('name'); ?>
 		<?php if (!empty($blog_info)) : ?>
-			<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
+		<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
 
 		<?php endif; ?>
 		<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twenty-nineteen-child')); ?>" class="imprint">
@@ -38,8 +38,8 @@
 		}
 		?>
 		<?php if (has_nav_menu('footer')) : ?>
-			<nav class="footer-navigation" aria-label="<?php esc_attr_e('Footer Menu', 'twenty-nineteen-child'); ?>">
-				<?php
+		<nav class="footer-navigation" aria-label="<?php esc_attr_e('Footer Menu', 'twenty-nineteen-child'); ?>">
+			<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'footer',
@@ -48,7 +48,7 @@
 					)
 				);
 				?>
-			</nav><!-- .footer-navigation -->
+		</nav><!-- .footer-navigation -->
 		<?php endif; ?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

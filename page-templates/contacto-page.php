@@ -18,7 +18,6 @@
 get_header();
 ?>
 <!--  Inicio de la página de servicios -->
-
 <div class="container">
 	<div class="column active">
 		<h2>Aquí me puedes encontrar</h2>

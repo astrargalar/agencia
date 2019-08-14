@@ -21,6 +21,7 @@
 	/* padding: 0 1em; */
 	--main-bg-color: rgba(148, 212, 166, 0.61);
 	--header-footer-bg-color: rgba(148, 211, 123, 0.452);
+	--varios-bg-color: hsl(250, 100%, 33%);
 }
 body {
 	background-color: var(--main-bg-color);
@@ -378,7 +379,7 @@ article.blog {
 	.texto2 {
 		/* text-align: center; */
 		font-size: 1rem;
-		padding-top: ;
+		padding-top: 1rem;
 		color: hsl(235, 100%, 33%);
 	}
 }
@@ -604,4 +605,46 @@ div.textwidget.custom-html-widget {
 }
 .redes a {
 	padding: 4px;
+}
+/*******************************************************Botón subir arriba ********************
+***********************************************************************************************/
+.gototop {
+	position: fixed;
+	display: block;
+	box-sizing: border-box;
+	height: 50px;
+	width: 50px;
+	border: none;
+	background-color: var(--varios-bg-color);
+	border-radius: 3px;
+	bottom: 50px;
+	right: 50px;
+	margin-right: -30px;
+	outline: none;
+	opacity: 0;
+	transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+}
+
+.visible {
+	transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+	margin-right: 0;
+	opacity: .6;
+}
+
+.gototop::before,
+.gototop::after {
+	content: '';
+	position: absolute;
+	height: 18px;
+	width: 2px;
+	background-color: #fff;
+	top: 16px;
+}
+.gototop::before {
+	left: 18px;
+	transform: rotate(45deg);
+}
+.gototop::after {
+	right: 18px;
+	transform: rotate(-45deg);
 }
