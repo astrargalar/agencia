@@ -53,9 +53,41 @@ h2:before {
 		z-index: 999;
 	}
 }
-.main-menu {
-	font-size: 1vw;
+@media only screen and (max-width: 767px) {
+	.main-menu {
+		font-size: 4vw;
+	}
+	.main-menu li a {
+		display: block;
+	}
+	.menu-social-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#masthead.site-header {
+		margin: 0 auto;
+	}
+	.site-branding-container {
+		padding: 0;
+		margin: -5px -30px;
+	}
+	.site-title,
+	.site-description {
+		margin-top: .5rem;
+		font-size: 4vw;
+		font-weight: 700;
+	}
+	.widget {
+		min-width: 100% !important;
+		margin: 0 auto;
+		padding: 2%;
+	}
+	section.widget {
+		width: 100% !important;
+	}
 }
+
+/* */
 .custom-logo-link {
 	background: transparent !important;
 	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
@@ -166,7 +198,7 @@ h2:before {
 ********************** Footer ******************************************************
 *************************************************************************************/
 .widget {
-	max-width: 33% !important;
+	max-width: 33%;
 }
 
 /* ***********  Poner border de color al footer *********/
@@ -305,7 +337,7 @@ article.blog {
 .container-portada {
 	background-image: url(./images/oficina-solo.jpg);
 	background-size: cover;
-	min-height: calc(100vh - 112px);
+	min-height: calc(100vh - 118px);
 	box-sizing: border-box;
 	background-attachment: fixed;
 	background-position: center;
@@ -315,6 +347,7 @@ article.blog {
 }
 .container-portada span {
 	display: block;
+	text-align: center !important;
 }
 .texto1 {
 	color: white;
@@ -322,19 +355,32 @@ article.blog {
 	font-weight: 700;
 	letter-spacing: 8px;
 	margin-bottom: 20px;
-	top: 0%;
+	/* top: 0%;
 	left: 0%;
-	transform: translate(36%, 100%);
+	transform: translate(36%, 100%); */
 	animation: text 3s 1;
 }
 .texto2 {
 	font-size: 30px;
 	color: #0073aa;
 	font-weight: 600;
-	top: 0%;
+	/* top: 0%;
 	left: 0%;
-	transform: translate(36%, 140%);
+	transform: translate(36%, 140%); */
 	animation: text 3s 1;
+}
+@media only screen and (max-width: 600px) {
+	.texto1 {
+		padding-top: 2.2rem;
+		font-size: 30px;
+		color: greenyellow;
+	}
+	.texto2 {
+		/* text-align: center; */
+		font-size: 1rem;
+		padding-top: ;
+		color: hsl(235, 100%, 33%);
+	}
 }
 @keyframes text {
 	0% {
@@ -478,28 +524,14 @@ ul {
 aside.widget-area {
 	margin-top: 0;
 }
-hr {
-	/* background-color: #820000; */
-}
+
 /* **********************************  Estilos botón Call to Action **********************************
 *************************************************************************************************** */
 div.textwidget.custom-html-widget {
 	text-align: center;
 }
 .myButton {
-	/* -moz-box-shadow: 0 10px 14px -7px #276873;
-	-webkit-box-shadow: 0 10px 14px -7px #276873;
-	box-shadow: 0 10px 14px -7px #276873;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0073aa), color-stop(1, #408c99));
-	background: -moz-linear-gradient(top, #0073aa 5%, #408c99 100%);
-	background: -webkit-linear-gradient(top, #0073aa 5%, #408c99 100%);
-	background: -o-linear-gradient(top, #0073aa 5%, #408c99 100%);
-	background: -ms-linear-gradient(top, #0073aa 5%, #408c99 100%);
-	background: linear-gradient(to bottom, #0073aa 5%, #408c99 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0073aa', endColorstr='#408c99', GradientType=0);
-	background-color: #0073aa; */
 	background-color: hsl(235, 100%, 33%);
-
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -537,7 +569,6 @@ div.textwidget.custom-html-widget {
 #mapid {
 	width: 80%;
 	height: 600px;
-	/* border: 1px solid brown; */
 	padding-bottom: 5rem;
 }
 .direcciones {
@@ -547,9 +578,7 @@ div.textwidget.custom-html-widget {
 }
 .direcciones p {
 	padding: 0 1rem;
-	/* text-align: center; */
 	hyphens: auto;
-	/* line-height: 2rem; */
 	border-bottom: 1px solid white;
 	font-size: medium;
 }
