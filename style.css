@@ -410,12 +410,16 @@ article.blog {
 }
 .container-about {
 	display: flex;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto !important;
 }
 #primary.content-area-sidebar {
 	width: 66%;
 	margin: 0 !important; /* margin: 0 -10rem 0 0; */
+}
+#primary.content-area {
+	max-width: 1000px;
+	margin: 0 auto !important;
 }
 .side-bar {
 	width: 33%;
@@ -608,6 +612,25 @@ div.textwidget.custom-html-widget {
 }
 /*******************************************************Botón subir arriba ********************
 ***********************************************************************************************/
+.volver-arriba {
+	display: none;
+	position: fixed;
+	bottom: 2em;
+	right: 0;
+	text-decoration: none;
+	color: #000000;
+	background-color: rgba(235, 235, 235, 0.80);
+	font-size: 12px;
+	padding: 1em;
+	z-index: 999;
+}
+
+.volver-arriba:hover {
+	background-color: rgba(135, 135, 135, 0.50);
+	text-decoration: none;
+	color: #ffffff;
+}
+
 .gototop {
 	position: fixed;
 	display: block;
@@ -647,4 +670,7 @@ div.textwidget.custom-html-widget {
 .gototop::after {
 	right: 18px;
 	transform: rotate(-45deg);
+}
+.botonimagen {
+	background-image: url(./images/mini_nave-espacial.png);
 }

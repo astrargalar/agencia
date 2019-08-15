@@ -46,5 +46,4 @@ get_header();
 		<div id="mapid"></div>
 	</div><!-- side-bar -->
 </div><!-- container -->
-<?php
-get_footer();
+<?php get_footer();

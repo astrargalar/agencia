@@ -17,29 +17,30 @@
 
 get_header();
 ?>
-<section id="primary" class="content-area">
-	<main id="main" class="site-main">
-		<h2>Últimos posts</h2>
-		<?php
-		if (have_posts()) {
 
-			// Load posts loop.
-			while (have_posts()) {
-				the_post();
-				get_template_part('template-parts/content/content-blog');
+<div class="container-about">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<h2>Últimos posts</h2>
+			<?php
+			if (have_posts()) {
+
+				// Load posts loop.
+				while (have_posts()) {
+					the_post();
+					get_template_part('template-parts/content/content-blog');
+				}
+
+				// Previous/next page navigation.
+				twentynineteen_the_posts_navigation();
+			} else {
+
+				// If no content, include the "No posts found" template.
+				get_template_part('template-parts/content/content', 'none');
 			}
+			?>
 
-			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
-		} else {
-
-			// If no content, include the "No posts found" template.
-			get_template_part('template-parts/content/content', 'none');
-		}
-		?>
-
-	</main><!-- .site-main -->
-</section><!-- .content-area -->
-<?php get_sidebar(); ?>
-<?php
-get_footer();
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
+</div>
+<?php get_footer();
