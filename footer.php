@@ -57,7 +57,7 @@
 
 <?php wp_footer(); ?>
 <!-- <a href="#" class="volver-arriba">Volver Arriba</a> -->
-<button class="gototop botonimagen"></button>
+<button class="gototop"></button>
 </body>
 
 </html>

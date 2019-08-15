@@ -239,7 +239,7 @@ nav.footer-navigation {
 ******************** BLOG *********************************
 ***********************************************************/
 .container {
-	width: 80%;
+	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -670,7 +670,4 @@ div.textwidget.custom-html-widget {
 .gototop::after {
 	right: 18px;
 	transform: rotate(-45deg);
-}
-.botonimagen {
-	background-image: url(./images/mini_nave-espacial.png);
 }
