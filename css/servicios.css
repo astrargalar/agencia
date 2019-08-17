@@ -235,7 +235,7 @@ img {
 	margin-top: 2em;
 } */
 
-@media screen and (max-width;620px) {
+@media screen and (max-width: 620px) {
 	.servicio.banner-servicio img {
 		transform: scale(.8) !important;
 	}
