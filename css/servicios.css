@@ -83,7 +83,7 @@ h2.titulo-seccion.max {
 	height: 0;
 	overflow: hidden;
 	clear: both;
-	background-color: var(--header-footer-bg-color);
+	background-color: var(--color_titulos);
 	/* background-color: hsl(235, 100%, 33%); */
 }
 .servicio .banner-servicio {

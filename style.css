@@ -20,11 +20,23 @@
 	hyphens: auto !important;
 	/* padding: 0 1em; */
 	--main-bg-color: rgba(148, 212, 166, 0.61);
-	--header-footer-bg-color: rgba(148, 211, 123, 0.452);
+	/* --header-footer-bg-color: rgba(148, 211, 123, 0.452); */
+	--header-footer-bg-color: linear-gradient(to left bottom, #1a0dab, #004ccd, #0079e4, #44a4f4, #88cdff);
+	--color_titulos: white !important;
 	--varios-bg-color: hsl(250, 100%, 33%);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul.main-menu > li > a,
+.posts_content > a {
+	color: var(--color_titulos) !important;
+}
 body {
-	background-color: var(--main-bg-color);
+	background-image: linear-gradient(to left bottom, #1a0dab, #004ccd, #0079e4, #44a4f4, #88cdff);
 }
 /* ********************** Eliminar las líneas separadoras de los títulos h1, h2 y posts */
 .entry .entry-title:before,
@@ -160,13 +172,13 @@ h2:before {
 }
 .site-title a:link,
 .site-title a:visited {
-	color: #0073aa;
+	color: white;
 }
 
 .site-description {
 	grid-area: site1;
 	margin-left: 0 !important;
-	color: #820000;
+	color: black;
 }
 .site-description:before {
 	content: " " !important;
@@ -244,7 +256,7 @@ nav.footer-navigation {
 }
 
 h2.entry-title a {
-	color: black;
+	color: var(--color_titulos);
 }
 .listado-entradas article:nth-child(1) {
 	min-width: 100% !important;
@@ -287,7 +299,7 @@ article.blog {
 	padding: 0.2rem;
 }
 .svg-icon {
-	fill: darkred;
+	fill: var(--color_titulos);
 }
 .entry-footer a {
 	color: #000000;
@@ -476,6 +488,15 @@ ul {
 .listado-recientes img {
 	margin-right: 0.8rem;
 }
+.wp-block-image img {
+	box-sizing: border-box !important;
+	margin: 0 auto !important;
+	max-width: 100% !important;
+}
+#colophon .site-info a {
+	color: white;
+}
+
 @media only screen and (min-width: 768px) {
 	.entry .entry-header {
 		margin: calc(3 * 1rem) calc(0% + 30px) 1rem;
@@ -579,13 +600,14 @@ div.textwidget.custom-html-widget {
 .direcciones {
 	width: 20%;
 	margin-left: 1rem;
-	background-color: var(--main-bg-color);
+	background-color: var(--header-footer-bg-color);
 }
 .direcciones p {
 	padding: 0 1rem;
 	hyphens: auto;
 	border-bottom: 1px solid white;
 	font-size: medium;
+	color: var(--color_titulos);
 }
 @media only screen and(max-width: 767px) {
 	.content-map {
