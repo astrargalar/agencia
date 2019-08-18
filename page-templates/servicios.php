@@ -128,7 +128,7 @@ get_header();
 						</div>
 					</a>
 				</article>
-				<!-- SERVICIO WORDPRESS A MEDIDA -->
+				<!-- SERVICIO WordPress A MEDIDA -->
 				<article class="servicio">
 					<a href="./adaptacion-de-wordpress-al-rgpd">
 						<div class="info-servicio">

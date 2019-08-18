@@ -14,9 +14,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (!twentynineteen_can_show_post_thumbnail()) : ?>
-		<header class="entry-header">
-			<?php get_template_part('template-parts/header/entry', 'header'); ?>
-		</header>
+	<header class="entry-header">
+		<?php get_template_part('template-parts/header/entry', 'header'); ?>
+	</header>
 	<?php endif; ?>
 	<div class="container">
 		<div class="entry-content">
@@ -25,7 +25,7 @@
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . __('Pages:', 'twentynineteen'),
+					'before' => '<div class="page-links">' . __('Pages:', 'twentynineteenchild'),
 					'after'  => '</div>',
 				)
 			);
@@ -33,13 +33,13 @@
 		</div><!-- .entry-content -->
 
 		<?php if (get_edit_post_link()) : ?>
-			<footer class="entry-footer">
-				<?php
+		<footer class="entry-footer">
+			<?php
 				edit_post_link(
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__('Edit <span class="screen-reader-text">%s</span>', 'twentynineteen'),
+							__('Edit <span class="screen-reader-text">%s</span>', 'twentynineteenchild'),
 							array(
 								'span' => array(
 									'class' => array(),
@@ -52,7 +52,7 @@
 					'</span>'
 				);
 				?>
-		</div>
-		</footer><!-- .entry-footer -->
+	</div>
+	</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

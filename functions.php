@@ -58,14 +58,14 @@ function crear_aviso_copyright()
     $todos_posts = get_posts('post_status=publish&order=ASC');
     $primer_post = $todos_posts[0];
     $primer_post_fecha = $primer_post->post_date_gmt;
-    _e('Copyright &copy; ');
+    _e('Copyright &copy; ', 'twentynineteenchild');
     if (substr($primer_post_fecha, 0, 4) == date('Y')) {
         echo date('Y');
     } else {
         echo substr($primer_post_fecha, 0, 4) . "-" . date('Y');
     }
     echo ' <strong>' . get_bloginfo('name') . '</strong> ';
-    _e('Todos los derechos reservados.');
+    _e('Todos los derechos reservados.', 'twentynineteenchild');
 }
 
 //Para añadir campos extras al perfil del usuario

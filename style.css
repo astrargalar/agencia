@@ -365,7 +365,7 @@ article.blog {
 	text-align: center !important;
 }
 .texto1 {
-	color: white;
+	color: var(--color_titulos);
 	font-size: 60px;
 	font-weight: 700;
 	letter-spacing: 8px;
@@ -377,7 +377,7 @@ article.blog {
 }
 .texto2 {
 	font-size: 30px;
-	color: #0073aa;
+	color: var(--main-bg-color);
 	font-weight: 600;
 	/* top: 0%;
 	left: 0%;
@@ -388,13 +388,13 @@ article.blog {
 	.texto1 {
 		padding-top: 2.2rem;
 		font-size: 30px;
-		color: greenyellow;
+		color: var(--color_titulos);
 	}
 	.texto2 {
 		/* text-align: center; */
 		font-size: 1rem;
 		padding-top: 1rem;
-		color: hsl(235, 100%, 33%);
+		color: var(--main-bg-color);
 	}
 }
 @keyframes text {
@@ -466,6 +466,7 @@ ol li.margentop {
 	padding-top: 0.5rem;
 }
 .posts_content a {
+	/*Esto sirve para que los párrafos largos se dividan en las líneas que le indiquemos en -webkit-line-clamp */
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
@@ -698,4 +699,33 @@ div.textwidget.custom-html-widget {
 .gototop::after {
 	right: 18px;
 	transform: rotate(-45deg);
+}
+/****************************************************Ajustes varios ************************************
+*******************************************************************************************************/
+p.author-description {
+	color: var(--header-footer-bg-color) !important;
+}
+.error-404 {
+	background-image: url(./images/detective-caricatura.png);
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 50%;
+	background-size: 20%;
+}
+h1 .page-title {
+	/* display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden; */
+	margin: 10px 0 0 0;
+}
+.archive .page-header .page-title,
+.search .page-header .page-title,
+.error404 .page-header .page-title {
+	color: #767676;
+	display: -webkit-inline-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	letter-spacing: normal;
 }

@@ -14,9 +14,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (!twentynineteen_can_show_post_thumbnail()) : ?>
-		<header class="entry-header">
-			<?php get_template_part('template-parts/header/entry', 'header'); ?>
-		</header>
+	<header class="entry-header">
+		<?php get_template_part('template-parts/header/entry', 'header'); ?>
+	</header>
 	<?php endif; ?>
 
 	<div class="entry-content">
@@ -26,7 +26,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen-Child'),
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteenchild'),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -39,7 +39,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __('Pages:', 'twentynineteen'),
+				'before' => '<div class="page-links">' . __('Pages:', 'twentynineteenchild'),
 				'after'  => '</div>',
 			)
 		);
@@ -52,7 +52,7 @@
 	</footer><!-- .entry-footer -->
 
 	<?php if (is_singular('attachment')) : ?>
-		<?php get_template_part('template-parts/post/author', 'bio'); ?>
+	<?php get_template_part('template-parts/post/author', 'bio'); ?>
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

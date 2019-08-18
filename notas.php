@@ -5,8 +5,8 @@
 	<?php endif; ?>
 	<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twentynineteenchild')); ?>" class="imprint">
 		<?php
-        /* translators: %s: WordPress. */
-        printf(__('Hecho con mucho esfuerzo por  %s.', 'twentynineteenchild'), 'Paco Silva');
-        ?>
+		/* translators: %s: WordPress. */
+		printf(__('Hecho con mucho esfuerzo por  %s.', 'twentynineteenchild'), 'Paco Silva');
+		?>
 	</a>
 </div> -->

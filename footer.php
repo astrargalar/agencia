@@ -25,10 +25,10 @@
 		<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
 
 		<?php endif; ?>
-		<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twenty-nineteen-child')); ?>" class="imprint">
+		<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twentynineteenchild')); ?>" class="imprint">
 			<?php
 			/* translators: %s: WordPress. */
-			printf(__('Hecho con mucho esfuerzo por  %s.', 'twenty-nineteen-child'), 'Paco Silva');
+			printf(__('Hecho con mucho esfuerzo por  %s.', 'twentynineteenchild'), 'Paco Silva');
 			?>
 
 		</a>
@@ -38,7 +38,7 @@
 		}
 		?>
 		<?php if (has_nav_menu('footer')) : ?>
-		<nav class="footer-navigation" aria-label="<?php esc_attr_e('Footer Menu', 'twenty-nineteen-child'); ?>">
+		<nav class="footer-navigation" aria-label="<?php esc_attr_e('Footer Menu', 'twentynineteenchild'); ?>">
 			<?php
 				wp_nav_menu(
 					array(
