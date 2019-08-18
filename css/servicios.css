@@ -181,7 +181,7 @@ img {
 
 .btn-accion a,
 .servicio .btn-accion span {
-	background-color: var(--header-footer-bg-color);
+	background-color: var(--main-bg-color);
 
 	/* background-color: hsl(235, 100%, 33%); */
 	/* color: #fff; */
