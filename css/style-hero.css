@@ -118,3 +118,6 @@ body {
 	margin: 0 auto !important;
 	/* margin-top: -2px; */
 }
+.box h2 {
+	color: var(--main-bg-color) !important;
+}

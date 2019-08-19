@@ -34,7 +34,7 @@ get_header();
 				<h2>Personalizamos plantillas</h2>
 				<p>Adaptamos cualquier plantilla comercial a tu negocio por menos de lo que imaginas.</p>
 				<div class="btn-accion">
-					<a href=" ./tarifas/"> <span>Más información</span> </a>
+					<a href="../tarifas/"> <span>Más información</span> </a>
 				</div>
 			</div>
 		</div>
@@ -52,7 +52,7 @@ get_header();
 				<h2>Mantenimiento WordPress</h2>
 				<p>Tu sitio web al día evitará problemas de seguridad y falta de rendimiento.</p>
 				<div class="btn-accion">
-					<a href="./tarifas/"><span>Más información</span></a>
+					<a href="../tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@ get_header();
 				<h2>Alta en Google My Business</h2>
 				<p>Creamos la ficha de tu negocio para que aparezcas en los primeros puestos de los buscadores.</p>
 				<div class="btn-accion">
-					<a href="./tarifas/"><span>Más información</span></a>
+					<a href="../tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@ get_header();
 				<h2>WordPress a medida</h2>
 				<p>Creamos un sitio web expresamente concebido para tu negocio o tu blog.</p>
 				<div class="btn-accion">
-					<a href="./tarifas/"><span>Más información</span></a>
+					<a href="../tarifas/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>

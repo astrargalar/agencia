@@ -18,17 +18,18 @@ get_header();
 
 		<div class="error-404 not-found">
 			<header class="page-header">
-				<h1 class="page-title"><?php _e('Oops! That page can&rsquo;t be found.', 'twentynineteenchild'); ?></h1>
+				<h1 class="page-title"><?php _e('¡Vaya, que corte! Parece que no puedo encontrar la página que buscas.', 'twentynineteenchild'); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php _e('It looks like nothing was found at this location. Maybe try a search?', 'twentynineteenchild'); ?></p>
+				<p><?php _e('Parece que no se encontró nada en esa dirección. Mejor intenta una nueva búsqueda.', 'twentynineteenchild'); ?></p>
 				<?php get_search_form(); ?>
 			</div><!-- .page-content -->
 		</div><!-- .error-404 -->
 
 	</main><!-- #main -->
 </section><!-- #primary -->
-
+<br>
+<br>
 <?php
 get_footer();
