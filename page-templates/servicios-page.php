@@ -52,7 +52,7 @@ get_header();
 				<h2>Mantenimiento WordPress</h2>
 				<p>Tu sitio web al día evitará problemas de seguridad y falta de rendimiento.</p>
 				<div class="btn-accion">
-					<a href="../tarifas/"><span>Más información</span></a>
+					<a href="../mantenimientowp/"><span>Más información</span></a>
 				</div>
 			</div>
 		</div>
