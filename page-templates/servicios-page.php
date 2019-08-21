@@ -34,7 +34,7 @@ get_header();
 				<h2>Personalizamos plantillas</h2>
 				<p>Adaptamos cualquier plantilla comercial a tu negocio por menos de lo que imaginas.</p>
 				<div class="btn-accion">
-					<a href="../tarifas/"> <span>Más información</span> </a>
+					<a href="../plantillas/"> <span>Más información</span> </a>
 				</div>
 			</div>
 		</div>

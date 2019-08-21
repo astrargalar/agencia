@@ -698,3 +698,108 @@ h1.page-title {
 	margin: 0 !important;
 	padding-top: 2em;
 }
+/************************************************ Estilos plantilla FAQ *****************************
+***************************************************************************************************/
+.container_faq {
+	margin: 0 auto !important;
+}
+.container_faq h1.entry-title {
+	display: none;
+}
+.container_faq .has-3-columns {
+	margin-left: 10%;
+}
+.container_faq .box_faq {
+	position: relative;
+	width: calc(400px - 30px);
+	height: calc(300px - 30px);
+	background: black; /**/
+	float: left;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.container_faq .box_faq .icon {
+	width: 100%;
+	height: 100%;
+
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 80px;
+	transition: .5s;
+	color: white !important;
+}
+.container_faq .box_faq:hover .icon {
+	top: 60px;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.container_faq .box_faq .icon .dashicons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(50%, 50%);
+	font-size: 80px;
+	transition: .5s;
+	color: white !important;
+}
+.container_faq .box_faq:hover .icon .dashicons {
+	font-size: 40px;
+}
+.container_faq .box_faq .content_faq {
+	position: absolute;
+	top: 100%;
+	height: calc(100% - 100px);
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: .5s;
+	opacity: 0;
+}
+.container_faq .box_faq:hover .content_faq {
+	top: 100px;
+	opacity: 1;
+}
+
+.container_faq .box_faq .content_faq h3 {
+	margin: 0 0 10px;
+	padding: 0;
+	color: white;
+	font-size: 1em;
+}
+.container_faq .box_faq .content_faq p {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: .8em;
+}
+/* .container_faq .box_faq:nth-child(1) .icon {
+	background: #319635;
+}
+.container_faq .box_faq:nth-child(1) {
+	background: #4caf50;
+} */
+.caja1 .box_faq {
+	background: #0041b1;
+}
+.caja1 .icon {
+	background: #0059d4;
+}
+.caja2 .box_faq {
+	background: #d03852;
+}
+.caja2 .icon {
+	background: #f54967;
+}
+.caja3 .box_faq {
+	background: #23798e;
+}
+.caja3 .icon {
+	background: #328fa5;
+}

@@ -52,6 +52,13 @@ function twentynineteenchild_starter_setup()
 }
 add_action('after_setup_theme', 'twentynineteenchild_starter_setup');
 
+//Soporte de dashicons
+add_action('wp_enqueue_scripts', 'load_dashicons_front_end');
+function load_dashicons_front_end()
+{
+    wp_enqueue_style('dashicons');
+}
+
 //Función para poner el aviso de copyright y desde el año que funciona la web
 function crear_aviso_copyright()
 {
