@@ -27,7 +27,7 @@ get_header();
 
 				<!-- SERVICIO ADAPTACIÓN PLANTILLAS -->
 				<article class="servicio">
-					<a href="./tema-blog-wordpress-a-medida/">
+					<a href="./plantillas/">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
@@ -60,7 +60,7 @@ get_header();
 
 				<!-- SERVICIO MANTENIMIENTO WordPress -->
 				<article class="servicio">
-					<a href="./mantenimiento-WordPress/">
+					<a href="./mantenimientowp/">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
@@ -97,7 +97,7 @@ get_header();
 
 				<!-- SERVICIO MY BUSINESS -->
 				<article class="servicio">
-					<a href="./adaptacion-de-wordpress-al-rgpd">
+					<a href="./mybusiness">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
@@ -130,7 +130,7 @@ get_header();
 				</article>
 				<!-- SERVICIO WordPress A MEDIDA -->
 				<article class="servicio">
-					<a href="./adaptacion-de-wordpress-al-rgpd">
+					<a href="./wpamedida">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
@@ -163,7 +163,7 @@ get_header();
 				</article>
 				<!-- SERVICIO EMAIL -->
 				<article class="servicio">
-					<a href="./adaptacion-de-wordpress-al-rgpd">
+					<a href="./e-marketing">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
@@ -196,7 +196,7 @@ get_header();
 				</article>
 				<!-- SERVICIO WOOCOMMERCE -->
 				<article class="servicio">
-					<a href="./adaptacion-de-wordpress-al-rgpd">
+					<a href="./tienda-on-line">
 						<div class="info-servicio">
 							<div class="banner-servicio-container">
 								<div class="banner-servicio">
