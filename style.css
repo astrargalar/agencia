@@ -805,3 +805,23 @@ h1.page-title {
 .caja3 .icon {
 	background: #328fa5;
 }
+.author_details {
+	display: inline-flex;
+	padding: 1em;
+}
+.author_details img {
+	margin: -10px -10px;
+	width: 4em;
+	height: 4em;
+}
+.author-bio {
+	margin: 0 auto !important;
+}
+.autor_mio {
+	/* display: inline-flex; */
+	border: 1px solid white;
+	padding: 10px;
+	margin-bottom: 1rem;
+	background: var(--header-footer-bg-color);
+	color: var(--color_titulos);
+}

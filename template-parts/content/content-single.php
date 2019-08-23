@@ -44,10 +44,14 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php twentynineteen_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<!-- <footer class="entry-footer">
+		<?php
+		//if (!class_exists('autor_mio')) {
+		//	echo (twentynineteen_entry_footer());
+		//}
+		?>
+	</footer> -->
+	<!--.entry-footer -->
 
 	<?php if (!is_singular('attachment')) : ?>
 	<?php get_template_part('template-parts/post/author', 'bio'); ?>
