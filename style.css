@@ -246,12 +246,13 @@ nav.footer-navigation {
 ******************** BLOG *********************************
 ***********************************************************/
 .container {
-	width: 1000px;
-	margin: 0 auto;
+	max-width: 1000px;
+	margin: 0 auto !important;
 }
 
 h2.entry-title a {
 	color: var(--color_titulos);
+	text-align: center;
 }
 .listado-entradas article:nth-child(1) {
 	min-width: 100% !important;
@@ -810,7 +811,7 @@ h1.page-title {
 	padding: 1em;
 }
 .author_details img {
-	margin: -10px -10px;
+	/* margin: -10px -10px; */
 	width: 4em;
 	height: 4em;
 }
@@ -824,4 +825,13 @@ h1.page-title {
 	margin-bottom: 1rem;
 	background: var(--header-footer-bg-color);
 	color: var(--color_titulos);
+}
+/******************************************** Ajustar la imagen de fondo de los posts ************************************/
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+	width: 100%;
+	object-fit: contain;
+}
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+	width: 100%;
+	object-fit: fill;
 }
