@@ -23,6 +23,12 @@
 	--color_titulos: white !important;
 	--varios-bg-color: hsl(250, 100%, 33%);
 }
+img.imageborder.alignleft.wp-post-image{
+	display: block;
+	padding:  5px 10px;
+	min-width: 120px;
+	min-height: 80px;
+}
 h1,
 h2,
 h3,
