@@ -21,9 +21,9 @@ get_header();
 <div class="container">
 	<div class="column active">
 		<h2>Aquí me puedes encontrar</h2>
-		<div class="content-map">
+		<div class="content-map content-area-sidebar">
 			<div id="mapid" class="map"></div>
-			<div class="direcciones">
+			<div class="direcciones sidebar">
 				<?php get_template_part('template-parts/content/content-redes'); ?>
 				<!-- Agrego el contenido de las redes sociales en un template part para poder reutilizarlo -->
 				<!-- <hr> -->

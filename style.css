@@ -24,10 +24,10 @@
 	--varios-bg-color: hsl(250, 100%, 33%);
 }
 img.imageborder.alignleft.wp-post-image{
-	display: block;
+	/* display: block;
 	padding:  5px 10px;
 	min-width: 120px;
-	min-height: 80px;
+	min-height: 80px; */
 }
 h1,
 h2,
@@ -72,7 +72,7 @@ h2:before {
 		z-index: 999;
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and ( max-width: 767px ) {
 	.main-menu {
 		font-size: 4vw;
 	}
@@ -218,9 +218,9 @@ div.site-info {
 	bottom: 0;
 	width: 100%;
 	background: var(--header-footer-bg-color);
-	color: #0073aa !important;
-	padding: 1rem 0 !important;
-	margin: auto !important;
+	/* color: #0073aa; */
+	padding: 1rem 0;
+	margin: auto!important;
 }
 /************  Creamos el Grid template *********/
 
@@ -295,6 +295,7 @@ article.blog {
 }
 .svg-icon {
 	fill: var(--color_titulos);
+	margin: 0 5px;
 }
 .entry-footer a,
 .entry-footer span {
@@ -411,37 +412,41 @@ article.blog {
 .container-about {
 	display: flex;
 	max-width: 1000px;
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 #primary.content-area-sidebar {
 	width: 66%;
-	margin: 0 !important;
+	margin: 0;
 }
 #primary.content-area {
 	max-width: 1000px;
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 .side-bar {
 	width: 33%;
 }
 .posts_content {
-	margin-top: -0.44rem;
+	margin-top: .44rem;
+	hyphens: auto;
 }
 .titulodelwidget {
 	text-align: center;
 	background-color: var(--header-footer-bg-color);
 }
 #primary.content-area-sidebar article > p {
-	margin: 0 0.5vw !important;
+	margin: 0 0.5vw;
 }
 ol {
 	list-style: none !important;
 	counter-reset: counter;
 }
+img.imageborder.alignleft.wp-post-image {
+    margin-top: .5rem;
+}
 ol li:before {
-	content: counter(counter);
+	content: counter( counter);
 	counter-increment: counter;
-	list-style: none !important;
+	list-style: none;
 	float: left;
 	width: 36px;
 	margin: -5px 0 0 -36px;
@@ -451,6 +456,10 @@ ol li:before {
 ol li.margentop {
 	padding-top: 0.5rem;
 }
+.el_titulo{
+	margin-top: 12px;
+	margin-left: 1rem;
+}
 .posts_content a {
 	/*Esto sirve para que los párrafos largos se dividan en las líneas que le indiquemos en -webkit-line-clamp */
 	display: -webkit-box;
@@ -459,11 +468,11 @@ ol li.margentop {
 	overflow: hidden;
 	line-height: 1.625;
 	font-size: 1rem;
-	margin-left: -0.5rem;
+	/* margin-left: 6rem ; */
 	text-align: left;
 }
 ul {
-	list-style: none !important;
+	list-style: none;
 }
 .listado-recientes {
 	display: flex;
@@ -473,17 +482,17 @@ ul {
 	margin-right: 0.8rem;
 }
 .wp-block-image img {
-	box-sizing: border-box !important;
-	margin: 0 auto !important;
-	max-width: 100% !important;
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 100%;
 }
 #colophon .site-info a {
 	color: white;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and ( min-width: 768px) {
 	.entry .entry-header {
-		margin: calc(3 * 1rem) calc(0% + 30px) 1rem;
+		margin: calc( 3 * 1rem) calc( 0% + 30px) 1rem;
 	}
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
@@ -492,8 +501,8 @@ ul {
 	.entry .entry-content,
 	.entry .entry-summary {
 		max-width: 100%;
-		margin: 0 1% 0 3% !important;
-		padding: 0 !important;
+		margin: 0 1% 0 3%;
+		padding: 0;
 	}
 	.side-bar {
 		max-width: 33%;
@@ -501,31 +510,33 @@ ul {
 	}
 	.side-bar ul {
 		list-style: none;
-		padding-right: 1rem !important;
-		font-size: 1.5vw;
+		padding-right: 1rem;
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and ( max-width: 767px ) {
 	.container-about {
 		flex-direction: column;
 	}
-	section.content-area-sidebar {
-		width: 60%;
+#primary.content-area-sidebar {
+		width: 100%;
 	}
 	.side-bar {
-		max-width: 33% !important;
-		max-width: 300px !important;
-	}
+		width: 100%;
+	} */
 	.side-bar ul {
 		list-style: none;
-		padding-right: 1rem !important;
-		font-size: 3vw;
+		padding-right: 1rem;
+		/* font-size: 3vw; */
 		counter-reset: li;
 		/* *********************** Esto establece contadores delante de los post **************************** */
 	}
+	.imagen{
+		width: 94%;
+		margin: 0 auto;
+	}
 }
 .posts_content p {
-	display: inline-block;
+	padding-top: -.5em;
 	font-size: 0.8rem;
 }
 aside.widget-area {
@@ -569,41 +580,48 @@ div.textwidget.custom-html-widget {
 }
 /* ************************************* Mapa con Leaflet.js ********************************
 ******************************************************************************************* */
+.column h2{
+	text-align: center;
+}
 .content-map {
-	display: flex; /* border: 1px solid brown; */
+	display: flex;
 	margin: 0 auto;
 }
 #mapid {
-	width: 80%;
+	min-width: 66%;
 	height: 600px;
-	padding-bottom: 5rem;
 }
 .direcciones {
-	width: 20%;
+	min-width: 30%;
 	margin-left: 1rem;
 	background-color: var(--header-footer-bg-color);
 }
 .direcciones p {
 	padding: 0 1rem;
-	hyphens: auto;
-	border-bottom: 1px solid white;
+	border: 1px solid white;
 	font-size: medium;
 	color: var(--color_titulos);
 }
-@media only screen and(max-width: 767px) {
+@media only screen and ( max-width: 767px ) {
 	.content-map {
 		display: block;
 	}
 	#mapid {
 		margin: 0 auto;
-		width: 100% !important;
+		max-width: 100% !important;
 	}
-	.direcciones {
-		margin: 5rem auto 0;
-		width: 100% !important;
+
+	.direcciones, .redes {
+		margin: 1em auto 0;
+		max-width: 100% !important;
+	}
+	.direcciones p {
+		text-align: right;
+		padding: 0;
 	}
 }
 .redes {
+	min-width: 30%;
 	display: flex;
 	flex-direction: row-reverse;
 	margin-right: 0;
@@ -676,7 +694,7 @@ div.textwidget.custom-html-widget {
 }
 /****************************************************Ajustes varios ************************************
 *******************************************************************************************************/
-p.author-description {
+p .author-description {
 	color: var(--header-footer-bg-color) !important;
 }
 .error-404 {
@@ -819,6 +837,9 @@ h1.page-title {
 	padding: 10px;
 	margin-bottom: 1rem;
 	background: var(--header-footer-bg-color);
+	color: var(--color_titulos);
+}
+.autor_color p{
 	color: var(--color_titulos);
 }
 /******************************************** Ajustar la imagen de fondo de los posts ************************************/
