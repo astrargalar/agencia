@@ -21,15 +21,16 @@
 	<?php
 	if (!is_404()) get_template_part('template-parts/footer/footer', 'widgets'); ?>
 	<div class="site-info">
+		<div class="nombre-sitio">
 		<?php $blog_info = get_bloginfo('name'); ?>
 		<?php if (!empty($blog_info)) : ?>
 		<a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php crear_aviso_copyright(); ?></a>
-
+		</div>
 		<?php endif; ?>
 		<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twentynineteenchild')); ?>" class="imprint">
 			<?php
 			/* translators: %s: WordPress. */
-			printf(__('Hecho con mucho esfuerzo por  %s.', 'twentynineteenchild'), 'Paco Silva');
+			printf(__('Hecho por  %s.', 'twentynineteenchild'), 'Paco Silva');
 			?>
 
 		</a>

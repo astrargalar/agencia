@@ -211,16 +211,17 @@ h2:before {
 .widget {
 	max-width: 33%;
 }
-
+#colophon .site-info {
+    margin: 0 auto;
+}
 /* ***********  Poner border de color al footer *********/
 div.site-info {
 	/* position: fixed;  Poner esto provoca que el footer se quede fijo en todas las páginas*/
 	bottom: 0;
-	width: 100%;
+	min-width: 100%;
 	background: var(--header-footer-bg-color);
-	/* color: #0073aa; */
-	padding: 1rem 0;
-	margin: auto!important;
+	padding: 10px ;
+	/* margin-left:0; */
 }
 /************  Creamos el Grid template *********/
 
@@ -229,21 +230,44 @@ div.site-info {
 	grid-template-columns: auto 1fr 1fr auto;
 	grid-template-rows: auto;
 	grid-template-areas: ". titulo descripcion nav2";
-	max-width: 100vw !important;
+	max-width: 100vw;
 }
 a.site-name {
-	grid-area: titulo;
+	grid-area: titulo; 
 	text-align: right;
 }
 a.imprint {
 	grid-area: descripcion;
-	text-align: center;
+	text-align: right;
+	display: block;
 }
 nav.footer-navigation {
 	grid-area: nav2;
 	padding-right: 1rem;
 	text-align: right;
-	max-width: 100% !important;
+	max-width: 100%;
+	display: block;
+}
+@media only screen and ( max-width:767px ) {
+	div.site-info {
+	display: grid;
+	grid-template-columns:auto auto;
+	grid-template-rows: auto;
+	grid-template-areas: "titulo" "titulo";
+	max-width: 100vw;
+}
+a.site-name::after{
+	content:" || ";
+}
+a.imprint {
+	display: none;
+}
+nav.footer-navigation {
+	padding-left: 1rem;
+    text-align: right;
+    max-width: 100%;
+    display: contents;
+} 
 }
 /***********************************************************
 ******************** BLOG *********************************
