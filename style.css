@@ -23,12 +23,6 @@
 	--color_titulos: white;
 	--varios-bg-color: hsl(250, 100%, 33%);
 }
-img.imageborder.alignleft.wp-post-image{
-	/* display: block;
-	padding:  5px 10px;
-	min-width: 120px;
-	min-height: 80px; */
-}
 h1,
 h2,
 h3,
@@ -194,9 +188,6 @@ h2:before {
 	text-align: right;
 	margin-top: 0;
 }
-.social-navigation ul.social-links-menu li a {
-	/* color: #820000; */
-}
 @media only screen and ( max-width: 767px) {
 	.site-title,
 	.site-description,
@@ -212,7 +203,11 @@ h2:before {
 	max-width: 33%;
 }
 #colophon .site-info {
-    margin: 0 auto;
+	margin: 0 auto;
+	padding-left: 20px;
+}
+#colophon .site-info a {
+	color: white;
 }
 /* ***********  Poner border de color al footer *********/
 div.site-info {
@@ -221,25 +216,29 @@ div.site-info {
 	min-width: 100%;
 	background: var(--header-footer-bg-color);
 	padding: 10px ;
-	/* margin-left:0; */
 }
 /************  Creamos el Grid template *********/
 
 div.site-info {
 	display: grid;
-	grid-template-columns: auto 1fr 1fr auto;
+	grid-template-columns: auto auto auto;
 	grid-template-rows: auto;
-	grid-template-areas: ". titulo descripcion nav2";
-	max-width: 100vw;
+	grid-template-areas: "titulo descripcion nav2";
 }
 a.site-name {
 	grid-area: titulo; 
-	text-align: right;
+}
+a.site-name::after{
+	content:" || ";
+}
+div.nombre-sitio{
+	text-align: end;
 }
 a.imprint {
 	grid-area: descripcion;
-	text-align: right;
-	display: block;
+	text-align: left;
+	/* display: block; */
+	padding-left: 10px;
 }
 nav.footer-navigation {
 	grid-area: nav2;
@@ -247,6 +246,11 @@ nav.footer-navigation {
 	text-align: right;
 	max-width: 100%;
 	display: block;
+}
+@media only screen and ( max-width:920px ){
+	a.imprint {
+	display: none;
+}
 }
 @media only screen and ( max-width:767px ) {
 	div.site-info {
@@ -258,9 +262,6 @@ nav.footer-navigation {
 }
 a.site-name::after{
 	content:" || ";
-}
-a.imprint {
-	display: none;
 }
 nav.footer-navigation {
 	padding-left: 1rem;
@@ -274,7 +275,7 @@ nav.footer-navigation {
 ***********************************************************/
 .container {
 	max-width: 1000px;
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 
 h2.entry-title a {
@@ -282,33 +283,23 @@ h2.entry-title a {
 	text-align: center;
 }
 .listado-entradas article:nth-child(1) {
-	min-width: 100% !important;
+	min-width: 100%;
 	margin-top: 0.5rem;
 }
 .listado-entradas article:nth-child(1) img {
-	padding: 1em 3em;
-	margin: 1em;
+	padding: 1em 0;
 }
 .listado-entradas article:nth-child(2) {
-	max-width: 33% !important;
+	max-width: 33%;
 }
-.listado-entradas article:nth-child(2) img {
-	min-width: 33% !important;
-}
-
 .listado-entradas article:nth-child(3) {
-	min-width: 66% !important;
-	/* background-color: aliceblue; */
+	min-width: 66%;
 }
-.listado-entradas article:nth-child(3) img {
-	min-width: 66% !important;
-}
-
 .listado-entradas article:nth-child(4) {
-	max-width: 66% !important;
+	max-width: 66%;
 }
 .listado-entradas article:nth-child(5) {
-	max-width: 33% !important;
+	max-width: 33%;
 }
 article.blog {
 	max-width: 49%;
@@ -323,7 +314,7 @@ article.blog {
 }
 .entry-footer a,
 .entry-footer span {
-	color: var(--varios-bg-color) !important;
+	color: var(--varios-bg-color);
 }
 
 .listado-entradas {
@@ -337,21 +328,24 @@ article.blog {
 	.listado-entradas article:nth-child(4),
 	.listado-entradas article:nth-child(5),
 	article .blog {
-		min-width: 100% !important;
+		min-width: 100%;
 	}
 }
 /*************** Estilos al botón leer más */
 .roll-button {
 	background-color: black;
-	color: #fff !important;
+	color: var(--color_titulos);
 	display: inline-block;
 	text-align: center;
 	border-radius: 10px 10px 10px 10px;
 	margin-left: 0.2em;
 	padding: 0.2em 1em;
 }
+.entry-content p .roll-button {
+	color: var(--color_titulos);
+}
 .roll-button:hover {
-	background-color: brown;
+	background-color: #1320B5;
 	-moz-transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	-o-transform: scale(1.2);
@@ -381,7 +375,7 @@ article.blog {
 }
 .container-portada span {
 	display: block;
-	text-align: center !important;
+	text-align: center ;
 }
 .texto1 {
 	color: var(--color_titulos);
@@ -397,7 +391,7 @@ article.blog {
 	font-weight: 600;
 	animation: text 3s 1;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and ( max-width: 600px ) {
 	.texto1 {
 		padding-top: 2.2rem;
 		font-size: 30px;
@@ -461,28 +455,34 @@ article.blog {
 	margin: 0 0.5vw;
 }
 ol {
-	list-style: none !important;
+	list-style: none;
 	counter-reset: counter;
 }
+ol li{
+	margin: 0 0 .5rem 0;
+	counter-increment: counter;
+	position: relative;
+}
 img.imageborder.alignleft.wp-post-image {
-    margin-top: .5rem;
+	margin-top: .5rem;
+	max-width: 50%;
 }
 ol li:before {
 	content: counter( counter);
-	counter-increment: counter;
-	list-style: none;
-	float: left;
-	width: 36px;
-	margin: -5px 0 0 -36px;
+	list-style: upper-latin;
+	position: absolute;
 	font-size: 36px;
 	text-align: center;
+}
+ol li::after{
+	clear: both;
 }
 ol li.margentop {
 	padding-top: 0.5rem;
 }
 .el_titulo{
 	margin-top: 12px;
-	margin-left: 1rem;
+	margin-left: 1.5rem;
 }
 .posts_content a {
 	/*Esto sirve para que los párrafos largos se dividan en las líneas que le indiquemos en -webkit-line-clamp */
@@ -492,7 +492,6 @@ ol li.margentop {
 	overflow: hidden;
 	line-height: 1.625;
 	font-size: 1rem;
-	/* margin-left: 6rem ; */
 	text-align: left;
 }
 ul {
@@ -510,11 +509,9 @@ ul {
 	margin: 0 auto;
 	max-width: 100%;
 }
-#colophon .site-info a {
-	color: white;
-}
 
-@media only screen and ( min-width: 768px) {
+
+@media only screen and ( min-width: 768px ) {
 	.entry .entry-header {
 		margin: calc( 3 * 1rem) calc( 0% + 30px) 1rem;
 	}
@@ -546,11 +543,10 @@ ul {
 	}
 	.side-bar {
 		width: 100%;
-	} */
+	} 
 	.side-bar ul {
 		list-style: none;
 		padding-right: 1rem;
-		/* font-size: 3vw; */
 		counter-reset: li;
 		/* *********************** Esto establece contadores delante de los post **************************** */
 	}
@@ -572,7 +568,7 @@ aside.widget-area {
 div.textwidget.custom-html-widget {
 	text-align: center;
 }
-.myButton {
+/* .myButton {
 	background-color: hsl(235, 100%, 33%);
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -580,28 +576,28 @@ div.textwidget.custom-html-widget {
 	display: inline-block;
 	margin: 0 auto;
 	cursor: pointer;
-	color: #ffffff !important;
+	color: #ffffff;
 	font-family: Arial;
 	font-size: 20px;
 	font-weight: bold;
 	padding: 13px 32px;
 	text-decoration: none;
 	text-shadow: 0 1px 0 #3d768a;
-}
-.myButton:hover {
+} */
+/* .myButton:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #0073aa));
 	background: -moz-linear-gradient(top, #408c99 5%, #0073aa 100%);
 	background: -webkit-linear-gradient(top, #408c99 5%, #0073aa 100%);
 	background: -o-linear-gradient(top, #408c99 5%, #0073aa 100%);
 	background: -ms-linear-gradient(top, #408c99 5%, #0073aa 100%);
 	background: linear-gradient(to bottom, #408c99 5%, #0073aa 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#0073aa', GradientType=0);
+	filter: progid: DXImageTransform.Microsoft.gradient ( startColorstr='#408c99', endColorstr='#0073aa', GradientType=0);
 	background-color: #408c99;
 }
 .myButton:active {
 	position: relative;
 	top: 1px;
-}
+} */
 /* ************************************* Mapa con Leaflet.js ********************************
 ******************************************************************************************* */
 .column h2{
@@ -632,12 +628,12 @@ div.textwidget.custom-html-widget {
 	}
 	#mapid {
 		margin: 0 auto;
-		max-width: 100% !important;
+		max-width: 100%;
 	}
 
 	.direcciones, .redes {
 		margin: 1em auto 0;
-		max-width: 100% !important;
+		max-width: 100%;
 	}
 	.direcciones p {
 		text-align: right;
@@ -657,32 +653,13 @@ div.textwidget.custom-html-widget {
 }
 /*******************************************************Botón subir arriba ********************
 ***********************************************************************************************/
-.volver-arriba {
-	display: none;
-	position: fixed;
-	bottom: 2em;
-	right: 0;
-	text-decoration: none;
-	color: #000000;
-	background-color: rgba(235, 235, 235, 0.80);
-	font-size: 12px;
-	padding: 1em;
-	z-index: 999;
-}
-
-.volver-arriba:hover {
-	background-color: rgba(135, 135, 135, 0.50);
-	text-decoration: none;
-	color: #ffffff;
-}
-
 .gototop {
 	position: fixed;
 	display: block;
 	box-sizing: border-box;
 	height: 50px;
 	width: 50px;
-	border: none;
+	border: 1px solid white;
 	background-color: var(--varios-bg-color);
 	border-radius: 3px;
 	bottom: 50px;
@@ -691,6 +668,9 @@ div.textwidget.custom-html-widget {
 	outline: none;
 	opacity: 0;
 	transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+}
+ .gototop:hover {
+	background-color: #000000;
 }
 
 .visible {
@@ -719,7 +699,7 @@ div.textwidget.custom-html-widget {
 /****************************************************Ajustes varios ************************************
 *******************************************************************************************************/
 p .author-description {
-	color: var(--header-footer-bg-color) !important;
+	color: var(--header-footer-bg-color);
 }
 .error-404 {
 	background-image: url(./images/detective-caricatura.png);
@@ -727,42 +707,42 @@ p .author-description {
 	background-position-x: 100%;
 	background-position-y: 30%;
 	background-size: 20%;
-	margin: 0 !important;
+	margin: 0;
 }
-h1.page-title {
-	margin: 0 !important;
+div.error-404 header.page-header h1.page-title{
+	color: var(--color_titulos);
+	margin: 0;
 }
+
 .archive .page-header .page-title,
 .search .page-header .page-title,
 .error404 .page-header .page-title {
 	color: #767676;
-	display: -webkit-inline-box !important;
+	display: -webkit-inline-box;
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	letter-spacing: normal;
 }
 .page-header {
-	margin: 0 !important;
+	margin: 0 auto;
 	padding-top: 2em;
 }
 /************************************************ Estilos plantilla FAQ *****************************
 ***************************************************************************************************/
 .container_faq {
-	margin: 0 auto !important;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .container_faq h1.entry-title {
 	display: none;
 }
 .container_faq .has-3-columns {
-	margin-left: 10%;
+	margin: 0;
 }
 .container_faq .box_faq {
 	position: relative;
-	width: calc( 400px - 30px );
 	height: calc( 300px - 30px );
-	background: black; 
-	float: left; 
 	margin: 15px;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -778,7 +758,7 @@ h1.page-title {
 	transform: translate(-50%, -50%);
 	font-size: 80px;
 	transition: .5s;
-	color: white !important;
+	color: white;
 }
 .container_faq .box_faq:hover .icon {
 	top: 60px;
@@ -794,7 +774,7 @@ h1.page-title {
 	transform: translate(50%, 50%);
 	font-size: 80px;
 	transition: .5s;
-	color: white !important;
+	color: var(--color_titulos);
 }
 .container_faq .box_faq:hover .icon .dashicons {
 	font-size: 40px;
@@ -817,29 +797,35 @@ h1.page-title {
 .container_faq .box_faq .content_faq h3 {
 	margin: 0 0 10px;
 	padding: 0;
-	color: white;
+	color: var(--color_titulos);
 	font-size: 1em;
 }
 .container_faq .box_faq .content_faq p {
 	margin: 0;
 	padding: 0;
-	color: white;
+	color: var(--color_titulos);
 	font-size: .8em;
 }
 .caja1 .box_faq {
 	background: #0041b1;
+	margin: 0;
+	padding: 0;
 }
 .caja1 .icon {
 	background: #0059d4;
 }
 .caja2 .box_faq {
 	background: #d03852;
+	margin: 0;
+	padding: 0;
 }
 .caja2 .icon {
 	background: #f54967;
 }
 .caja3 .box_faq {
 	background: #23798e;
+	margin: 0;
+	padding: 0;
 }
 .caja3 .icon {
 	background: #328fa5;
@@ -849,7 +835,6 @@ h1.page-title {
 	padding: 1em;
 }
 .author_details img {
-	/* margin: -10px -10px; */
 	width: 4em;
 	height: 4em;
 }

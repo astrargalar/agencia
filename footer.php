@@ -30,7 +30,7 @@
 		<a href="<?php echo esc_url(__('https://pacosilva.com/', 'twentynineteenchild')); ?>" class="imprint">
 			<?php
 			/* translators: %s: WordPress. */
-			printf(__('Hecho por  %s.', 'twentynineteenchild'), 'Paco Silva');
+			printf(__('Hecho por con esfuerzo por %s.', 'twentynineteenchild'), 'Paco Silva');
 			?>
 
 		</a>
