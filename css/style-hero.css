@@ -47,13 +47,14 @@ body {
 	transform: translateY(100%);
 	box-sizing: border-box;
 	padding: 40px;
-	background-color: var(--header-footer-bg-color);
+	background: cornflowerblue;
 	text-align: center;
 	transition: 0.5s;
-	opacity: 1;
+	opacity: .6;
+
 }
 .container-hero .column.active .content .box {
-	opacity: 1;
+	opacity: .9;
 	transform: translateY(-50%);
 }
 .container-hero .column .content .box h2 {
