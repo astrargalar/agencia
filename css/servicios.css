@@ -48,7 +48,7 @@ h2.titulo-seccion.max {
 .servicio .banner-servicio-container {
 	position: relative;
 	padding-bottom: 55.4%;
-	height: 0;
+	/* height: 0; */
 	overflow: hidden;
 	clear: both;
 	background-color: var(--color_titulos);
@@ -65,7 +65,7 @@ h2.titulo-seccion.max {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: center !important;
+	align-items: center;
 }
 article.servicio:hover {
 	z-index: 9999;
@@ -132,12 +132,12 @@ img {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	text-decoration: none !important;
+	text-decoration: none;
 	height: 100%;
 }
 .servicio .btn-accion a,
 .servicio .btn-accion span {
-	min-width: 100% !important;
+	min-width: 100%;
 	width: unset;
 	display: block;
 	text-transform: uppercase;
@@ -166,66 +166,66 @@ img {
 
 /********************************************************************************************************/
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 514px) {
 	.listado-servicios {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding-bottom: 2rem !important;
-		margin: 0 auto !important;
+		padding-bottom: 2rem;
+		margin: 0 auto;
 	}
-	article.servicio {
-		margin: 0 auto !important;
-		width: 90%;
-		margin-bottom: 2rem !important;
+	article .servicio {
+		margin: 0 auto;
+		width: 100%;
+		margin-bottom: 2rem;
 	}
 	.servicio.banner-servicio img {
-		transform: scale(0.8) !important;
+		transform: scale(0.8);
 	}
 	.servicio section {
 		display: flex;
 		flex-wrap: wrap;
 		box-sizing: border-box;
-		margin: 0 auto !important;
+		margin: 0 auto;
 	}
 }
-@media screen and (max-width: 767px) and (min-width: 415px) {
+@media screen and (max-width: 767px) and (min-width: 515px) {
 	.listado-servicios {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding-bottom: 2rem !important;
-		margin: 0 auto !important;
+		padding-bottom: 2rem;
+		margin: 0 auto;
 	}
 	article.servicio {
-		width: 45%;
+		width: 50%;
 	}
 	.servicio.banner-servicio img {
-		transform: scale(.8) !important;
+		transform: scale(.8);
 	}
 	.servicio section {
 		display: flex;
 		flex-wrap: wrap;
 		box-sizing: border-box;
-		margin: 0 auto !important;
+		margin: 0 auto;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.titulo-seccion.max {
-		margin: 0 auto !important;
-		box-sizing: border-box !important;
+		margin: 0 auto;
+		box-sizing: border-box;
 	}
 	.listado-servicios {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		padding-bottom: 2rem;
-		margin: 0 auto !important;
+		margin: 0 auto;
 	}
 
 	.servicio {
-		width: 33% !important;
+		width: 33%;
 	}
 }
 
@@ -237,11 +237,11 @@ img {
 	text-align: center;
 }
 .barra-lateral {
-	clear: both !important;
+	clear: both;
 	font-size: 2.5rem;
 	margin-left: .1em;
 	margin-top: 1rem;
-	margin-bottom: -10px !important;
+	margin-bottom: -10px;
 }
 .tiempo {
 	margin-top: -.8rem;
