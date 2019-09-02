@@ -471,8 +471,17 @@ ol li:before {
 	content: counter( counter);
 	list-style: upper-latin;
 	position: absolute;
-	font-size: 36px;
+	--size: 36px;
+	line-height: var(--size);
+	width: var(--size);
+	height: var(--size);
+	top:calc(.8* var(--size));
+	color: var(--color_titulos);
+	transform: rotate(-10deg);
+	background: var(--varios-bg-color);
+	border-radius: 50%;
 	text-align: center;
+	box-shadow: 1px 1px 0 #999;
 }
 ol li::after{
 	clear: both;
@@ -482,7 +491,7 @@ ol li.margentop {
 }
 .el_titulo{
 	margin-top: 12px;
-	margin-left: 1.5rem;
+	margin-left: 2rem;
 }
 .posts_content a {
 	/*Esto sirve para que los párrafos largos se dividan en las líneas que le indiquemos en -webkit-line-clamp */
