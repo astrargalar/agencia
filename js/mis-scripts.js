@@ -40,24 +40,6 @@
 	}
 })(jQuery);
 
-//Botón volver arriba
-// jQuery(document).ready(function() {
-// 	var offset = 220;
-// 	var duration = 500;
-// 	jQuery(window).scroll(function() {
-// 		if (jQuery(this).scrollTop() > offset) {
-// 			jQuery('.volver-arriba').fadeIn(duration);
-// 		} else {
-// 			jQuery('.volver-arriba').fadeOut(duration);
-// 		}
-// 	});
-
-// 	jQuery('.volver-arriba').click(function(event) {
-// 		event.preventDefault();
-// 		jQuery('html, body').animate({ scrollTop: 0 }, duration);
-// 		return false;
-// 	});
-// });
 
 //Página Hero
 (function($) {
