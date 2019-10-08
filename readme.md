@@ -1,4 +1,5 @@
-Tema de WordPress desarrollado desde el tema Twenty Nineteen - Tema hijo. Iniciado el 26/07/2019 en Chiclana de la Frontera (Cádiz) Spain y finalizado el 03/09/2019. 
+Creación de un tema para una agencia de desarrollo web con WordPress. Muy bien puede ser la página que finalmente subiré a la web para empezar mi negocio como freelance WordPress.
+Tema hijo de WordPress desarrollado desde el tema Twenty Nineteen. Iniciado el 08/10/2019 en Chiclana de la Frontera (Cádiz) Spain y finalizado el /2019. 
 
 WordPress theme developed from the Twenty Nineteen theme - Child theme. Started on 07/26/2019 in Chiclana de la Frontera (Cádiz) Spain and finished 09/03/2019.
 
